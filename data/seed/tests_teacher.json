@@ -1,0 +1,2498 @@
+[
+ {
+  "id": "t_l1",
+  "title": "1-dars testi: Fonetika va rod",
+  "lesson": 1,
+  "source": "2-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Rus tilida nechta unli harf va nechta unli tovush mavjud?",
+    "options": [
+     "10 ta harf, 10 ta tovush",
+     "10 ta harf, 6 ta tovush",
+     "6 ta harf, 10 ta tovush"
+    ],
+    "correct": 1,
+    "explanation": "а, о, у, и, ы, э"
+   },
+   {
+    "q": "Я, Е, Ё, Ю harflari qaysi holatda ikkita tovush [y + unli] beradi?",
+    "options": [
+     "Faqat undosh harflardan keyin kelganda",
+     "So'z boshida, unlilardan keyin hamda Ъ va Ь belgilaridan keyin",
+     "Faqat so'z oxirida urg'u ostida kelganda"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Юг, маяк, семья» so'zlaridagi yotlashgan unlilar nechtadan tovush beradi?",
+    "options": [
+     "Barchasida 1 tadan tovush",
+     "Barchasida 2 tadan tovush",
+     "Faqat «юг» so'zida 2 ta tovush"
+    ],
+    "correct": 1,
+    "explanation": "y + unli"
+   },
+   {
+    "q": "Qaysi undosh tovushlar rus tilida doimo qattiq hisoblanadi va yumshamaydi?",
+    "options": [
+     "Ж, Ш, Ц",
+     "Ч, Щ, Й",
+     "Б, В, Г"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi undosh tovushlar rus tilida doimo yumshoq hisoblanadi va qattiqlashmaydi?",
+    "options": [
+     "Ж, Ш, Ц",
+     "Ч, Щ, Й",
+     "Л, М, Н"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Doim jarangli sonor (undosh) tovushlar qatorini aniqlang:",
+    "options": [
+     "Б, В, Г, Д, Ж, З",
+     "Л, М, Н, Р, Й",
+     "Х, Ц, Ч, Щ"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Doim jarangsiz undosh tovushlar qatorini aniqlang:",
+    "options": [
+     "Х, Ц, Ч, Щ",
+     "П, Ф, К, Т, Ш, С",
+     "Л, М, Н, Р"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Rus alifbosida o'z mustaqil tovushiga ega bo'lmagan belgilar qaysilar?",
+    "options": [
+     "Ъ (qattiq belgi) va Ь (yumshatish belgisi)",
+     "Ы va И",
+     "Й va Ц"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мел, люк, пенал» so'zlaridagi unlilar o'zidan oldingi undoshga qanday ta'sir qiladi?",
+    "options": [
+     "Qattiq o'qitadi",
+     "Oldingi undoshni yumshatadi",
+     "Hech qanday ta'sir qilmaydi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Rus tilida jarangli juft undoshlar so'z oxirida qanday o'qiladi (oglusheniye)?",
+    "options": [
+     "O'z jarangini saqlaydi",
+     "O'zining jarangsiz juftiga aylanadi",
+     "Cho'zib o'qiladi"
+    ],
+    "correct": 1,
+    "explanation": "Masalan: город → [горот]"
+   },
+   {
+    "q": "«Кофе» so'zi qaysi rodga mansub va unga qaysi olmosh to'g'ri keladi?",
+    "options": [
+     "Средний род (оно / моё кофе)",
+     "Мужской род (он / мой кофе)",
+     "Женский род (она / моя кофе)"
+    ],
+    "correct": 1,
+    "explanation": "«Кофе» — qat'iy istisno: он / мой кофе"
+   },
+   {
+    "q": "-МЯ bilan tugaydigan 10 ta maxsus ot qaysi jinsga kiradi?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 2,
+    "explanation": "имя, время, знамя..."
+   },
+   {
+    "q": "«Время» so'ziga qaysi ko'rsatkich mos keladi?",
+    "options": [
+     "Мой время (m.r)",
+     "Моя время (j.r)",
+     "Моё время (s.r)"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Папа, дедушка, дядя, юноша, мужчина» so'zlari -А/-Я bilan tugasa ham nega мужской род bo'ladi?",
+    "options": [
+     "Qat'iy qoida yo'qligi uchun",
+     "Erkak jinsidagi shaxslarni bildirgani uchun",
+     "Umumiy rod bo'lgani uchun"
+    ],
+    "correct": 1,
+    "explanation": "biologik jins"
+   },
+   {
+    "q": "«Умница, сирота, плакса, жадина, соня» so'zlari qaysi rodga kiradi?",
+    "options": [
+     "Faqat erkak jinsiga",
+     "Faqat ayol jinsiga",
+     "Umumiy rodga"
+    ],
+    "correct": 2,
+    "explanation": "общий род — kontekstga qarab o'zgaradi"
+   },
+   {
+    "q": "«Мадина — большая умница» gapida «умница» so'zi qaysi jins vazifasida kelgan?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Тимур — большой умница» gapida «умница» so'zi qaysi jins vazifasida kelgan?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi barcha so'zlar faqat o'rta jinsga (средний род) tegishli?",
+    "options": [
+     "Окно, письмо, море, здание, яблоко",
+     "Стол, дом, класс, музей",
+     "Книга, школа, ручка, вода"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi so'zlar o'zgarmas (склонение bo'lmaydigan) o'rta jins otlaridir?",
+    "options": [
+     "Стол, стул, окно",
+     "Пальто, метро, кафе, кино",
+     "Тетрадь, словарь, книга"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Tirik shaxslar/hayvonlarga va jonsiz buyumlarga qaysi grammatik so'roqlar beriladi?",
+    "options": [
+     "Jonsizga «Кто?», tirikka «Что?»",
+     "Tirikka «Кто?» (Kim?), jonsizga «Что?» (Nima?)",
+     "Ikkalasiga ham «Кто?»"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Словарь, преподаватель, портфель, дождь, конь» so'zlari qaysi rodga mansub?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 0,
+    "explanation": "-Ь bilan tugovchi erkak jinsi"
+   },
+   {
+    "q": "«Тетрадь, дверь, ночь, мышь, площадь, кровать» so'zlari qaysi rodga mansub?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": "-Ь bilan tugovchi ayol jinsi"
+   },
+   {
+    "q": "«Ночь, мышь, вещь, дочь» so'zlarida nima sababdan oxirida Ь yoziladi?",
+    "options": [
+     "Erkak jinsi bo'lgani uchun",
+     "Ayol jinsidagi otlarda шипящий (ж, ч, ш, щ) tovushlardan keyin Ь yozilishi shart",
+     "Ixtiyoriy yoziladi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Нож, врач, этаж, карандаш» so'zlari oxirida nima uchun Ь yozilmaydi?",
+    "options": [
+     "Ular erkak jinsidagi (мужской род) otlar bo'lgani uchun Ь yozilmaydi",
+     "Xato yozilgan",
+     "Ayol jinsi bo'lgani uchun"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«День» so'ziga qaysi olmosh to'g'ri birikadi?",
+    "options": [
+     "Мой день (он)",
+     "Моя день (она)",
+     "Моё день (оно)"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Осень» so'ziga qaysi olmosh to'g'ri birikadi?",
+    "options": [
+     "Мой осень (он)",
+     "Моя осень (она)",
+     "Моё осень (оно)"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Мать» va «Дочь» so'zlarining jinsi qaysi?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Медведь» so'zining grammatik jinsi qaysi?",
+    "options": [
+     "Мужской род (он / мой)",
+     "Женский род (она / моя)",
+     "Средний род"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Quyidagilardan qaysi biri -МЯ bilan tugovchi 10 ta maxsus o'rta jins so'ziga kirmaydi?",
+    "options": [
+     "Семя",
+     "Земля",
+     "Пламя"
+    ],
+    "correct": 1,
+    "explanation": "chunki bu ayol jinsidagi oddiy so'z"
+   },
+   {
+    "q": "«Коллега, тихоня, непоседа, грязнуля» so'zlari qaysi grammatik guruhga kiradi?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Общий род"
+    ],
+    "correct": 2,
+    "explanation": ""
+   }
+  ]
+ },
+ {
+  "id": "t_l2",
+  "title": "2-dars testi: Otlarning ko'plik shakli",
+  "lesson": 2,
+  "source": "3-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Rus tilida erkak jinsidagi qattiq undosh bilan tugagan otlar ko'plikda qanday qo'shimcha oladi?",
+    "options": [
+     "-Ы",
+     "-И",
+     "-А"
+    ],
+    "correct": 0,
+    "explanation": "стол → столы, завод → заводы"
+   },
+   {
+    "q": "«-Й» yoki «-Ь» bilan tugaydigan erkak jinsi so'zlari ko'plikda qanday qo'shimcha oladi?",
+    "options": [
+     "-Ы",
+     "-И",
+     "-Я"
+    ],
+    "correct": 1,
+    "explanation": "музей → музеи, словарь → словари"
+   },
+   {
+    "q": "7 ta undosh (Г, К, Х, Ж, Ч, Ш, Щ) qoidasiga ko'ra otlar ko'plikda qaysi harfni oladi?",
+    "options": [
+     "Doimo -Ы",
+     "HECH QACHON -Ы bo'lmaydi, FAQAT -И",
+     "-А"
+    ],
+    "correct": 1,
+    "explanation": "книги, ручки, карандаши"
+   },
+   {
+    "q": "«-А» bilan tugaydigan ayol jinsi so'zlari ko'plikda qanday tugaydi?",
+    "options": [
+     "-Ы",
+     "-И",
+     "-Я"
+    ],
+    "correct": 0,
+    "explanation": "машина → машины, газета → газеты"
+   },
+   {
+    "q": "«-Я» yoki «-Ь» bilan tugaydigan ayol jinsi so'zlari ko'plikda nima oladi?",
+    "options": [
+     "-Ы",
+     "-И",
+     "-А"
+    ],
+    "correct": 1,
+    "explanation": "неделя → недели, тетрадь → тетради"
+   },
+   {
+    "q": "«-О» bilan tugaydigan o'rta jins so'zlari ko'plikda qanday o'zgaradi?",
+    "options": [
+     "-А",
+     "-О",
+     "-Ы"
+    ],
+    "correct": 0,
+    "explanation": "окно → окна, письмо → письма"
+   },
+   {
+    "q": "«-Е» bilan tugaydigan o'rta jins so'zlari ko'plikda qanday qo'shimcha oladi?",
+    "options": [
+     "-А",
+     "-Я",
+     "-И"
+    ],
+    "correct": 1,
+    "explanation": "море → моря, здание → здания"
+   },
+   {
+    "q": "«-МЯ» bilan tugaydigan 10 ta o'rta jins so'zlari ko'plikda qanday o'zak oladi?",
+    "options": [
+     "-ЕНА",
+     "-МЫ",
+     "-И"
+    ],
+    "correct": 0,
+    "explanation": "имя → имена, время → времена"
+   },
+   {
+    "q": "«Человек» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Человеки",
+     "Люди",
+     "Людья"
+    ],
+    "correct": 1,
+    "explanation": "butunlay o'zgaruvchi istisno"
+   },
+   {
+    "q": "«Ребёнок» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Ребёнки",
+     "Дети",
+     "Ребята"
+    ],
+    "correct": 1,
+    "explanation": "butunlay o'zgaruvchi istisno"
+   },
+   {
+    "q": "«Брат» va «Друг» so'zlari ko'plikda qanday shaklga kiradi?",
+    "options": [
+     "Браты, други",
+     "Братья, друзья",
+     "Братья, други"
+    ],
+    "correct": 1,
+    "explanation": "-ЬЯ oluvchi istisnolar"
+   },
+   {
+    "q": "«Стул» va «Дерево» so'zlarining ko'pligi qaysi?",
+    "options": [
+     "Стулья, деревья",
+     "Стулы, дерева",
+     "Стулы, деревья"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Дом, город, учитель» so'zlari ko'plikda qanday qo'shimcha bilan tugaydi?",
+    "options": [
+     "-Ы",
+     "Urg'uli -А / -Я",
+     "-И"
+    ],
+    "correct": 1,
+    "explanation": "дома, города, учителя"
+   },
+   {
+    "q": "«Этот, Эта, Это» ko'rsatish olmoshlarining barcha rodlar uchun KO'PLIK shakli qaysi?",
+    "options": [
+     "Эты",
+     "Эти",
+     "Это"
+    ],
+    "correct": 1,
+    "explanation": "эти столы, эти книги, эти окна"
+   },
+   {
+    "q": "«Этот новый стол» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Эти новые столы",
+     "Этот новые столы",
+     "Эти новый столы"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Эта интересная книга» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Эти интересные книги",
+     "Эта интересные книги",
+     "Эти интересная книги"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Это большое окно» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Эти большие окна",
+     "Это большие окна",
+     "Эти большое окна"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Яблоко» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Яблока",
+     "Яблоки",
+     "Яблоко"
+    ],
+    "correct": 1,
+    "explanation": "Istisno: яблоко → яблоки"
+   },
+   {
+    "q": "«Словарь» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "Словари",
+     "Словары",
+     "Словаря"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Площадь» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "Площады",
+     "Площади",
+     "Площадя"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Мальчик» so'zi ko'plikda nega «мальчикы» bo'lmaydi?",
+    "options": [
+     "К harfidan keyin hech qachon Ы yozilmaydi, faqat И yoziladi",
+     "Urg'u tushmagani uchun",
+     "Ayol jinsi bo'lgani uchun"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Врач, карандаш, этаж, нож» so'zlarining ko'pligi qanday tugaydi?",
+    "options": [
+     "-И bilan",
+     "-Ы bilan",
+     "-А bilan"
+    ],
+    "correct": 0,
+    "explanation": "врачи, карандаши, этажи, ножи"
+   },
+   {
+    "q": "«Поезд, паспорт, профессор» so'zlarining ko'pligi qaysi?",
+    "options": [
+     "Поезда, паспорта, профессора",
+     "Поезды, паспорты, профессоры",
+     "Поезди, паспорти"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Лист» (daraxt bargi) so'zining ko'pligi qaysi?",
+    "options": [
+     "Листы",
+     "Листья",
+     "Листа"
+    ],
+    "correct": 1,
+    "explanation": "-ЬЯ bilan"
+   },
+   {
+    "q": "«Сын» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "Сыны",
+     "Сыновья",
+     "Сынья"
+    ],
+    "correct": 1,
+    "explanation": "-ОВЬЯ istisnosi"
+   },
+   {
+    "q": "«День» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "Дни",
+     "Дены",
+     "Денья"
+    ],
+    "correct": 0,
+    "explanation": "unli tushib qoladi va -и oladi"
+   },
+   {
+    "q": "«Ночь» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "Ночы",
+     "Ночи",
+     "Ноча"
+    ],
+    "correct": 1,
+    "explanation": "ч harfidan keyin faqat и yoziladi"
+   },
+   {
+    "q": "«Эта комната чистая» gapining ko'plik shakli qaysi?",
+    "options": [
+     "Эти комнаты чистые",
+     "Эта комнаты чистые",
+     "Эти комната чистая"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мой друг живёт здесь» gapining ko'pligi qaysi?",
+    "options": [
+     "Мои друзья живут здесь",
+     "Мои други живут здесь",
+     "Мой друзья живут здесь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Кошка» va «Собака» so'zlarining ko'plik shakli qaysi?",
+    "options": [
+     "Кошки, собаки",
+     "Кошкы, собакы",
+     "Кошка, собака"
+    ],
+    "correct": 0,
+    "explanation": "Г va К harflaridan keyin faqat -И"
+   }
+  ]
+ },
+ {
+  "id": "t_l3",
+  "title": "3-dars testi: Sifatlarning moslashishi",
+  "lesson": 3,
+  "source": "4-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Rus tilida sifatlar otlar bilan qaysi grammatik xususiyatlarda moslashadi?",
+    "options": [
+     "Faqat sonda moslashadi",
+     "Rod (jins), son va kelishikda to'liq moslashadi",
+     "Hech qachon moslashmaydi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Erkak jinsidagi sifatlarga qaysi so'roq beriladi va ularning qo'shimchalari qaysilar?",
+    "options": [
+     "Какая? (-ая / -яя)",
+     "Какой? (-ый / -ий / -ой)",
+     "Какое? (-ое / -ее)"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Ayol jinsidagi sifatlarga qaysi so'roq beriladi?",
+    "options": [
+     "Какая? (-ая / -яя)",
+     "Какой? (-ый / -ий)",
+     "Какие? (-ые / -ие)"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "O'rta jinsdagi sifatlarga qaysi so'roq beriladi va qo'shimchalari qaysi?",
+    "options": [
+     "Какой? (-ый / -ий)",
+     "Какое? (-ое / -ее)",
+     "Чей? (мой / твой)"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Barcha jinsdagi KO'PLIK sifatlariga qaysi so'roq beriladi?",
+    "options": [
+     "Какой?",
+     "Какая?",
+     "Какие?"
+    ],
+    "correct": 2,
+    "explanation": "-ые / -ие"
+   },
+   {
+    "q": "«Новый стол» birikmasining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Новые столы",
+     "Новая столы",
+     "Новый столы"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Красивая девушка» birikmasining ko'plikdagi shakli qaysi?",
+    "options": [
+     "Красивые девушки",
+     "Красивая девушки",
+     "Красивый девушки"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Большое окно» birikmasining ko'plikdagi shakli qaysi?",
+    "options": [
+     "Большие окна",
+     "Большое окна",
+     "Большой окна"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Синий» sifati ayol jinsida qanday qo'shimcha oladi?",
+    "options": [
+     "Синяя",
+     "Синая",
+     "Синее"
+    ],
+    "correct": 0,
+    "explanation": "yumshoq o'zak bo'lgani uchun -яя oladi"
+   },
+   {
+    "q": "7 ta undosh (Г, К, Х, Ж, Ч, Ш, Щ) qoidasiga ko'ra sifatlar ko'plikda qanday qo'shimcha oladi?",
+    "options": [
+     "-ые",
+     "FAQAT -ие",
+     "-ая"
+    ],
+    "correct": 1,
+    "explanation": "русские, хорошие, свежие, большие"
+   },
+   {
+    "q": "«Хороший друг» birikmasi ayol jinsida qanday bo'ladi?",
+    "options": [
+     "Хорошая подруга",
+     "Хороший подруга",
+     "Хорошее подруга"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Свежий хлеб» birikmasida sifat qaysi rodga moslashgan?",
+    "options": [
+     "Женский род",
+     "Мужской род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": "он / хлеб"
+   },
+   {
+    "q": "«Горячий чай» birikmasining o'rta jinsdagi shakli qaysi?",
+    "options": [
+     "Горячая кофе",
+     "Горячее молоко",
+     "Горячие воды"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Летнее время» birikmasida sifat nega -ее olgan?",
+    "options": [
+     "«Время» so'zi o'rta jins bo'lgani va «летний» yumshoq o'zak bo'lgani uchun",
+     "Xato yozilgan",
+     "Erkak jinsi bo'lgani uchun"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Дорогой профессор» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Дорогие профессора",
+     "Дорогие профессоры",
+     "Дорогая профессора"
+    ],
+    "correct": 0,
+    "explanation": "urg'uli -а istisnosi bilan"
+   },
+   {
+    "q": "«Маленький ребёнок» birikmasining ko'plik shakli qaysi?",
+    "options": [
+     "Маленькие ребёнки",
+     "Маленькие дети",
+     "Маленькая дети"
+    ],
+    "correct": 1,
+    "explanation": "o'zagi o'zgaruvchi istisno"
+   },
+   {
+    "q": "«Старый дом» birikmasining ko'plik shakli qaysi?",
+    "options": [
+     "Старые дома",
+     "Старые домы",
+     "Старая дома"
+    ],
+    "correct": 0,
+    "explanation": "urg'uli -а istisnosi bilan"
+   },
+   {
+    "q": "«Верный друг» birikmasining ko'plik shakli qaysi?",
+    "options": [
+     "Верные друзья",
+     "Верные други",
+     "Верная друзья"
+    ],
+    "correct": 0,
+    "explanation": "-ья istisnosi bilan"
+   },
+   {
+    "q": "«Интересный рассказ» birikmasiga qaysi so'roq beriladi?",
+    "options": [
+     "Какая?",
+     "Какой?",
+     "Какое?"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Русский язык» so'z birikmasidagi sifat qaysi jinsda?",
+    "options": [
+     "Женский род",
+     "Мужской род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Умный юноша» birikmasida sifat nega erkak jinsida turibdi?",
+    "options": [
+     "Chunki «юноша» -а bilan tugasa ham biologik erkak kishini bildiradi",
+     "Qoida bo'yicha ayol jinsi bo'lishi kerak",
+     "Ixtiyoriy qo'yilgan"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Тёплое море» birikmasidagi sifat va ot qaysi rodga mansub?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род"
+    ],
+    "correct": 2,
+    "explanation": "-е bilan tugagani uchun"
+   },
+   {
+    "q": "«Тяжёлый портфель» birikmasida «портфель» so'zining rodi qaysi?",
+    "options": [
+     "Женский род",
+     "Мужской род",
+     "Средний род"
+    ],
+    "correct": 1,
+    "explanation": "-ь bilan tugovchi erkak jinsi"
+   },
+   {
+    "q": "«Тёмная ночь» birikmasida «ночь» so'zining rodi qaysi?",
+    "options": [
+     "Женский род",
+     "Мужской род",
+     "Средний род"
+    ],
+    "correct": 0,
+    "explanation": "шипящийdan keyin ь kelgani uchun"
+   },
+   {
+    "q": "«Широкая площадь» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Широкие площади",
+     "Широкая площади",
+     "Широкие площадь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Вкусное яблоко» birikmasining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Вкусные яблока",
+     "Вкусные яблоки",
+     "Вкусная яблоки"
+    ],
+    "correct": 1,
+    "explanation": "Istisno: яблоко → яблоки, sifat esa -ые oladi"
+   },
+   {
+    "q": "«Младший брат» birikmasining ko'pligi qaysi?",
+    "options": [
+     "Младшие братья",
+     "Младшие браты",
+     "Младшая братья"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Высокое здание» birikmasiga qaysi so'roq to'g'ri keladi?",
+    "options": [
+     "Какой?",
+     "Какая?",
+     "Какое?"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Sifatlar gapda qaysi so'z turkumi bilan bog'lanib keladi?",
+    "options": [
+     "Fe'l bilan",
+     "Ot (существительное) bilan",
+     "Ravish bilan"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Новые словари» birikmasining birlikdagi shakli qaysi?",
+    "options": [
+     "Новый словарь",
+     "Новая словарь",
+     "Новое словарь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   }
+  ]
+ },
+ {
+  "id": "t_exam14",
+  "title": "1–4-darslar imtihoni (50 ta)",
+  "lesson": "exam14",
+  "source": "50 talik imtihon fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Qaysi qatordagi barcha so'zlarda unlilar o'zidan oldingi undoshni yumshatmaydi?",
+    "options": [
+     "мама, вода, лук, стол",
+     "мел, люк, пенал, мяч",
+     "день, ночь, лето, осень",
+     "река, земля, поле, песня"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Юг, маяк, объявление, семья» so'zlaridagi yotlashgan unlilar nechtadan tovush beradi?",
+    "options": [
+     "Barchasida 1 tadan tovush",
+     "Barchasida 2 tadan tovush",
+     "Faqat «юг» so'zida 2 ta tovush",
+     "Faqat «маяк» va «семья» so'zlarida 2 ta tovush"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda faqat doimo jarangli sonor undosh tovushlar berilgan?",
+    "options": [
+     "Б, В, Г, Д, Ж, З",
+     "Л, М, Н, Р, Й",
+     "Х, Ц, Ч, Щ",
+     "П, Ф, К, Т, Ш, С"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda faqat doimo qattiq undosh tovushlar joylashgan?",
+    "options": [
+     "Ж, Ш, Ц",
+     "Ч, Щ, Й",
+     "Б, Д, З",
+     "Л, М, Н"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi gapda grammatik jins (rod) xatosi mavjud?",
+    "options": [
+     "Мы заказали вкусное кофе в кафе.",
+     "Мой дедушка читает утреннюю газету.",
+     "На стене висит большая карта.",
+     "Этот юноша очень умный."
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi barcha so'zlar o'rta jinsga (средний род) tegishli?",
+    "options": [
+     "время, имя, знамя, племя",
+     "стол, класс, музей, конь",
+     "земля, неделя, песнь, родина",
+     "кофе, юноша, дедушка, папа"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi yumshoq belgili (-Ь) barcha so'zlar erkak jinsiga mansub?",
+    "options": [
+     "словарь, преподаватель, дождь, конь",
+     "тетрадь, площадь, кровать, мышь",
+     "ночь, дочь, вещь, радость",
+     "дверь, осень, соль, кровь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Тимур — большой умница, а Мадина — настоящая соня» gapidagi ajratilgan so'zlar qaysi rodga mansub?",
+    "options": [
+     "Faqat erkak jinsiga",
+     "Umumiy rodga",
+     "Faqat ayol jinsiga",
+     "O'rta jinsga"
+    ],
+    "correct": 1,
+    "explanation": "общий род"
+   },
+   {
+    "q": "«Ночь, мышь, дочь, вещь» so'zlarining oxirida Ь yozilishining sababi nima?",
+    "options": [
+     "Erkak jinsi bo'lgani uchun",
+     "Ayol jinsida шипящий undoshlardan keyin yozilishi shartligi uchun",
+     "So'z urg'usi oxirida bo'lgani uchun",
+     "Faqat talaffuzni yumshatish uchun"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda faqat o'zgarmas (склонение bo'lmaydigan) otlar berilgan?",
+    "options": [
+     "пальто, метро, кино, кафе",
+     "стол, стул, окно, ручка",
+     "тетрадь, словарь, книга, дом",
+     "брат, сестра, друг, мама"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi barcha otlar ko'plikda faqat «-И» qo'shimchasini oladi?",
+    "options": [
+     "книга, мальчик, карандаш, нож",
+     "стол, завод, документ, журнал",
+     "окно, письмо, дело, слово",
+     "комната, газета, машина, карта"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi so'z ko'plik shaklida «-ЬЯ» qo'shimchasini olmaydi?",
+    "options": [
+     "брат",
+     "стул",
+     "город",
+     "дерево"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Человек» va «Ребёнок» so'zlarining ko'plik shakli to'g'ri ko'rsatilgan qatorni toping:",
+    "options": [
+     "человеки, ребёнки",
+     "люди, дети",
+     "люди, ребята",
+     "человеки, дети"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatordagi barcha so'zlar ko'plikda urg'uli «-А / -Я» qo'shimchasini oladi?",
+    "options": [
+     "дом, город, поезд, профессор",
+     "стол, стул, шкаф, класс",
+     "студент, документ, завод, журнал",
+     "мальчик, карандаш, врач, нож"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Время» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "время",
+     "времи",
+     "времяна",
+     "времена"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Яблоко» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "яблока",
+     "яблоки",
+     "яблоко",
+     "яблоке"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda faqat KO'PLIKDA ishlatiladigan (birlik shakli yo'q) otlar berilgan?",
+    "options": [
+     "очки, ножницы, брюки, часы",
+     "молоко, сахар, вода, соль",
+     "книги, тетради, ручки, карандаши",
+     "столы, стулья, окна, двери"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda faqat BIRLIKDA ishlatiladigan (ko'plik shakli yo'q) otlar berilgan?",
+    "options": [
+     "вода, молоко, сахар, рис",
+     "брюки, джинсы, шорты, деньги",
+     "дома, города, леса, моря",
+     "студенты, ученики, врачи, профессора"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Сын» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "сыны",
+     "сынья",
+     "сыновья",
+     "сына"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Лист» (daraxt bargi) so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "листы",
+     "листыя",
+     "листья",
+     "листа"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Nuqtalar o'rniga mos ko'rsatish olmoshlarini qo'ying: «... стол, ... книга, ... окно, ... дети»",
+    "options": [
+     "этот, эта, это, эти",
+     "эта, этот, эти, это",
+     "это, эта, этот, эти",
+     "эти, этот, эта, это"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Какой? Какая? Какое? Какие?» so'roqlari qaysi so'z turkumiga tegishli?",
+    "options": [
+     "Ot (имя существительное)",
+     "Sifat (имя прилагательное)",
+     "Olmosh (местоимение)",
+     "Fe'l (глагол)"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Синий» sifati qaysi qatorda jins va sonda to'g'ri o'zgargan?",
+    "options": [
+     "синый, синая, синое, синые",
+     "синий, синяя, синее, синие",
+     "синий, синая, синее, синии",
+     "синой, синяя, синое, синие"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Sifatlar ko'plikda 7 ta undoshdan keyin qanday qo'shimcha oladi?",
+    "options": [
+     "-ые",
+     "-ие",
+     "-ая",
+     "-ее"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Большой дом» birikmasining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "большие домы",
+     "большой дома",
+     "большие дома",
+     "большая дома"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Хороший друг» birikmasining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "хорошие други",
+     "хорошие друзья",
+     "хорошые друзья",
+     "хорошая друзья"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Маленький ребёнок» birikmasining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "маленькие ребёнки",
+     "маленький дети",
+     "маленькие дети",
+     "маленькая дети"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Русский язык» birikmasida sifat nega «-ий» qo'shimchasini olgan?",
+    "options": [
+     "«К» harfidan keyin «ы» yozilmasligi sababli",
+     "Urg'u oxirida bo'lgani sababli",
+     "Ayol jinsida bo'lgani sababli",
+     "Boshqa so'z topilmagani sababli"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Горячий чай» birikmasi o'rta jinsdagi «молоко» so'ziga moslashtirilsa qanday bo'ladi?",
+    "options": [
+     "горячая молоко",
+     "горячее молоко",
+     "горячий молоко",
+     "горячие молоко"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Новый, большой, добрый, высокий» sifatlarining antonimlari qaysi qatorda to'g'ri berilgan?",
+    "options": [
+     "старый, маленький, злой, низкий",
+     "хороший, плохой, умный, глупый",
+     "тёплый, холодный, свежий, старый",
+     "дорогой, дешёвый, лёгкий, трудный"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Egalik olmoshlarining so'roqlari qaysi qatorda to'g'ri berilgan?",
+    "options": [
+     "Какой? Какая? Какое? Какие?",
+     "Чей? Чья? Чьё? Чьи?",
+     "Кто? Что? Где? Куда?",
+     "Сколько? Который? Чей? Как?"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Тетрадь» (ayol jinsi) so'ziga qaysi savol va olmosh to'g'ri keladi?",
+    "options": [
+     "Чей? — Мой тетрадь",
+     "Чья? — Моя тетрадь",
+     "Чьё? — Моё тетрадь",
+     "Чьи? — Мои тетрадь"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Словарь» (erkak jinsi) so'ziga qaysi savol va olmosh to'g'ri keladi?",
+    "options": [
+     "Чья? — Моя словарь",
+     "Чьё? — Моё словарь",
+     "Чей? — Мой словарь",
+     "Чьи? — Мои словарь"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Время» (o'rta jins) so'ziga qaysi egalik olmoshi mos keladi?",
+    "options": [
+     "наш время",
+     "наша время",
+     "наше время",
+     "наши время"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Дети» (ko'plik) so'ziga qaysi egalik olmoshi mos keladi?",
+    "options": [
+     "наш дети",
+     "наша дети",
+     "наше дети",
+     "наши дети"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "Rus tilida «ЕГО, ЕЁ, ИХ» olmoshlari haqidagi eng qat'iy qoida qaysi?",
+    "options": [
+     "Ular otning rodiga qarab «егой, еёная, ихний» bo'lib o'zgaradi",
+     "Ular HECH QACHON rod va songa qarab o'zgarmaydi",
+     "Ular faqat o'rta jinsda o'zgaradi",
+     "Ular faqat ko'plikda o'zgaradi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Его» olmoshi qoidaga ko'ra qanday talaffuz qilinadi?",
+    "options": [
+     "[Yego]",
+     "[Yevo]",
+     "[Igo]",
+     "[Ego]"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Qiz bolaning kitoblari» iborasi rus tilida qanday bo'ladi?",
+    "options": [
+     "его книги",
+     "еёные книги",
+     "её книги",
+     "их книги"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«O'g'il bolaning xonasi» iborasi rus tilida qanday bo'ladi?",
+    "options": [
+     "его комната",
+     "егойная комната",
+     "её комната",
+     "их комната"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Ularning yangi uyi» birikmasi rus tilida qanday to'g'ri yoziladi?",
+    "options": [
+     "ихний новый дом",
+     "их новая дом",
+     "их новый дом",
+     "его новый дом"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda «Olmosh + Sifat + Ot» zanjiri erkak jinsida to'g'ri tuzilgan?",
+    "options": [
+     "Моя новый друг",
+     "Мой новый друг",
+     "Моё новый друг",
+     "Мои новый друг"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda «Olmosh + Sifat + Ot» zanjiri ayol jinsida to'g'ri tuzilgan?",
+    "options": [
+     "Наш большая аудитория",
+     "Наша большая аудитория",
+     "Наше большая аудитория",
+     "Наши большая аудитория"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda «Olmosh + Sifat + Ot» zanjiri o'rta jinsda to'g'ri tuzilgan?",
+    "options": [
+     "Твой синее платье",
+     "Твоя синее платье",
+     "Твоё синее платье",
+     "Твои синее платье"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi qatorda «Olmosh + Sifat + Ot» zanjiri ko'plikda to'g'ri tuzilgan?",
+    "options": [
+     "Мои хорошие друзья",
+     "Мой хорошие друзья",
+     "Моя хорошие друзья",
+     "Моё хорошие друзья"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Этот студент читает книгу» gapining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "Этот студенты читают книги",
+     "Эти студенты читают книги",
+     "Эти студент читают книги",
+     "Эты студенты читает книги"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Это наша главная улица» gapidagi barcha so'zlar qaysi rodga moslashgan?",
+    "options": [
+     "Мужской род",
+     "Средний род",
+     "Женский род",
+     "Ko'plik"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«В аудитории сидят ... студенты и слушают ... профессора» gapida nuqtalar o'rniga mos so'zlar qaysi?",
+    "options": [
+     "умные / опытного",
+     "умная / опытная",
+     "умное / опытное",
+     "умный / опытные"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Чьи это вещи на столе?» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это мой вещи",
+     "Это моя вещи",
+     "Это моё вещи",
+     "Это мои вещи"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Bu bizning yangi darsligimiz va sizning daftarlaringiz» jumlasining to'g'ri tarjimasi qaysi?",
+    "options": [
+     "Это наш новый учебник и ваши тетради.",
+     "Это наша новый учебник и ваш тетради.",
+     "Это наше новое учебник и ваши тетрадь.",
+     "Это наши новые учебники и ваша тетради."
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Uning (erkakning) opasi bizning maktabimizda ishlaydi» jumlasining to'g'ri tarjimasi qaysi?",
+    "options": [
+     "Её сестра работает в нашей школе.",
+     "Их сестра работает в нашем школе.",
+     "Его сестра работает в нашей школе.",
+     "Егой сестра работает в наше школе."
+    ],
+    "correct": 2,
+    "explanation": ""
+   }
+  ]
+ },
+ {
+  "id": "t_rev14",
+  "title": "1–4-darslar takrorlash testi",
+  "lesson": "exam14",
+  "source": "5-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "«Это ... комната, а это ... словарь» gapida nuqtalar o'rniga mos olmoshlar qaysi?",
+    "options": [
+     "мой / моя",
+     "моя / мой",
+     "моё / мои",
+     "мои / моё"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Чей? Чья? Чьё? Чьи?» so'roqlari qaysi so'z turkumiga beriladi?",
+    "options": [
+     "Sifatlarga",
+     "Egalik olmoshlariga",
+     "Fe'llarga",
+     "Sonlarga"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Его, её, их» olmoshlari haqidagi qaysi qoida to'g'ri?",
+    "options": [
+     "Rodga qarab o'zgaradi",
+     "Hech qachon rod va songa qarab o'zgarmaydi",
+     "Faqat ko'plikda o'zgaradi",
+     "Sifat qo'shimchasini oladi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Его» olmoshi qanday talaffuz qilinadi?",
+    "options": [
+     "[yego]",
+     "[yevo]",
+     "[igo]",
+     "[evo]"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Время» (vaqt) so'ziga qaysi egalik olmoshi to'g'ri keladi?",
+    "options": [
+     "наш время",
+     "наша время",
+     "наше время",
+     "наши время"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Дети» so'ziga qaysi olmosh to'g'ri birikadi?",
+    "options": [
+     "мой дети",
+     "моя дети",
+     "моё дети",
+     "мои дети"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Большой дом» birikmasining ko'plikdagi shakli qaysi?",
+    "options": [
+     "большие домы",
+     "большой дома",
+     "большие дома",
+     "большая дома"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Хороший друг» birikmasining ko'plikdagi shakli qaysi?",
+    "options": [
+     "хорошие други",
+     "хорошие друзья",
+     "хорошые друзья",
+     "хорошая друзья"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "7 ta undosh (Г, К, Х, Ж, Ч, Ш, Щ) dan keyin sifatlar ko'plikda qanday qo'shimcha oladi?",
+    "options": [
+     "-ые",
+     "-ие",
+     "-ая",
+     "-ее"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Синий» sifati ayol jinsida qanday yoziladi?",
+    "options": [
+     "синая",
+     "синяя",
+     "синее",
+     "синии"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Человек» so'zining ko'plikdagi to'g'ri shakli qaysi?",
+    "options": [
+     "человеки",
+     "люди",
+     "людья",
+     "ребята"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Стул» so'zining ko'plikdagi shakli qaysi?",
+    "options": [
+     "стулы",
+     "стулья",
+     "стули",
+     "стулей"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Кофе» so'zi qaysi jinsga mansub?",
+    "options": [
+     "Средний род",
+     "Мужской род",
+     "Женский род",
+     "Umumiy rod"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Тетрадь» so'zining jinsi qaysi?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род",
+     "Umumiy rod"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Словарь» so'zining jinsi qaysi?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род",
+     "Umumiy rod"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Это наша новая школа» gapidagi «наша новая» qaysi rodga moslashgan?",
+    "options": [
+     "Мужской род",
+     "Женский род",
+     "Средний род",
+     "Ko'plik"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Окно» so'zi ko'plikda qanday o'zgaradi?",
+    "options": [
+     "окны",
+     "окна",
+     "окни",
+     "окно"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Город» so'zi ko'plikda qanday shaklga kiradi?",
+    "options": [
+     "городы",
+     "города",
+     "городья",
+     "городе"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Маленький ребёнок» birikmasining ko'pligi qaysi?",
+    "options": [
+     "маленькие ребёнки",
+     "маленькие дети",
+     "маленький дети",
+     "маленькая дети"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Яблоко» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "яблока",
+     "яблоки",
+     "яблоко",
+     "яблоке"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Новый» so'zining antonimi qaysi?",
+    "options": [
+     "большой",
+     "старый",
+     "хороший",
+     "добрый"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Высокий» so'zining antonimi qaysi?",
+    "options": [
+     "низкий",
+     "маленький",
+     "плохой",
+     "узкий"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Чья это книга?» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это мой книга",
+     "Это моя книга",
+     "Это моё книга",
+     "Это мои книга"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Чей это карандаш?» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это твой карандаш",
+     "Это твоя карандаш",
+     "Это твоё карандаш",
+     "Это твои карандаш"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Чьи это вещи?» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это наш вещи",
+     "Это наша вещи",
+     "Это наше вещи",
+     "Это наши вещи"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Их» olmoshi nimani bildiradi?",
+    "options": [
+     "Uning (erkak)",
+     "Uning (ayol)",
+     "Ularning",
+     "Bizning"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Её» olmoshi nimani bildiradi?",
+    "options": [
+     "Uning (ayol kishining)",
+     "Uning (erkak kishining)",
+     "Ularning",
+     "Sizning"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Этот, эта, это» olmoshlarining barcha rodlar uchun ko'pligi qaysi?",
+    "options": [
+     "эты",
+     "эти",
+     "это",
+     "эта"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Брат» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "браты",
+     "братья",
+     "брати",
+     "брата"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Дерево» so'zining ko'plik shakli qaysi?",
+    "options": [
+     "дерева",
+     "деревья",
+     "деревы",
+     "деревей"
+    ],
+    "correct": 1,
+    "explanation": ""
+   }
+  ]
+ },
+ {
+  "id": "t_l5",
+  "title": "5-dars testi: Fe'llarning tuslanishi",
+  "lesson": 5,
+  "source": "6-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Rus tilida fe'llar noaniq shaklda (инфинитив) qanday qo'shimchalar bilan tugaydi?",
+    "options": [
+     "-ТЬ, -ТИ, -ЧЬ",
+     "-ЫЙ, -ИЙ, -ОЙ",
+     "-А, -Я, -О, -Е",
+     "-УТ, -ЮТ"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Fe'lning tuslanishi (спряжение) nimalarga qarab o'zgaradi?",
+    "options": [
+     "Shaxs (лицо) va Son (число) bo'yicha",
+     "Rod va Kelishik bo'yicha",
+     "Faqat rod bo'yicha",
+     "Hech qachon o'zgarmaydi"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Hozirgi zamonda fe'llar haqidagi qaysi qat'iy qoida to'g'ri?",
+    "options": [
+     "Hozirgi zamonda fe'llar rod (jins) bo'yicha hech qachon o'zgarmaydi",
+     "Hozirgi zamonda fe'llar rodga qarab o'zgaradi",
+     "Hozirgi zamonda fe'llar faqat ayol jinsida bo'ladi",
+     "Hozirgi zamonda shaxs qo'shimchalari bo'lmaydi"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "I tuslanish fe'llari shaxslarda qaysi unlini oladi?",
+    "options": [
+     "-Е- (-Ё-) va -УТ / -ЮТ",
+     "-И- va ko'plik 3-shaxsda -АТ / -ЯТ",
+     "Faqat -О-",
+     "Faqat -А-"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "II tuslanish fe'llari shaxslarda qaysi unlini oladi?",
+    "options": [
+     "-Е- (-Ё-) va -УТ / -ЮТ",
+     "-И- va -АТ / -ЯТ",
+     "Faqat -У-",
+     "Faqat -Ы-"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Читать» fe'li «ОНИ» shaxsida qanday tuslanadi?",
+    "options": [
+     "читают",
+     "читаят",
+     "читает",
+     "читаем"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Говорить» fe'li «ОНИ» shaxsida qanday tuslanadi?",
+    "options": [
+     "говорят",
+     "говорут",
+     "говорит",
+     "говорим"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Я ... по-русски, и ты тоже хорошо ... по-русски» gapida nuqtalar o'rniga nima qo'yiladi?",
+    "options": [
+     "говорю / говоришь",
+     "говорит / говорите",
+     "говорим / говорят",
+     "говорю / говорит"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Студенты внимательно ... лекцию» gapida qaysi fe'l shakli to'g'ri?",
+    "options": [
+     "слушает",
+     "слушаем",
+     "слушают",
+     "слушаешь"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Qaysi turdagi (вид) fe'llarning HOZIRGI ZAMONI UMUMAN YO'Q?",
+    "options": [
+     "Совершенный вид (СВ — tugallangan tur)",
+     "Несовершенный вид (НСВ — tugallanmagan tur)",
+     "Ikkala turning ham bor",
+     "O'tgan zamon fe'llarining"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Harakatning jarayonini, davomiyligini qaysi turdagi fe'llar bildiradi?",
+    "options": [
+     "Несовершенный вид (НСВ: читать, писать, учить)",
+     "Совершенный вид (СВ: прочитать, написать)",
+     "Sifatlar",
+     "Ravishlar"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Читать» (НСВ) fe'lining jufti bo'lgan СВ fe'li qaysi?",
+    "options": [
+     "прочитать",
+     "вычитать",
+     "дочитать",
+     "зачитать"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Писать» (НСВ) fe'lining СВ jufti qaysi?",
+    "options": [
+     "написать",
+     "переписать",
+     "выписать",
+     "списать"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Говорить» (НСВ) fe'lining СВ jufti qaysi (o'zagi o'zgaruvchi)?",
+    "options": [
+     "сказать",
+     "поговорить",
+     "выговорить",
+     "переговорить"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Делать» fe'lining СВ jufti qaysi?",
+    "options": [
+     "сделать",
+     "переделать",
+     "доделать",
+     "выделать"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мы сейчас ... упражнение» gapida qaysi fe'l qo'yiladi?",
+    "options": [
+     "делаем",
+     "сделаем",
+     "делают",
+     "делаете"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Она часто ... родителям» gapida «звонить» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "звонит",
+     "звонят",
+     "звонишь",
+     "звоню"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Что ты сейчас ...?» savolida qaysi shakl to'g'ri?",
+    "options": [
+     "делаешь",
+     "делает",
+     "делают",
+     "делаем"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Преподаватель ... новое правило» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "объясняет",
+     "объясняют",
+     "объясняем",
+     "объясняешь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Я ... новые слова каждый день» gapida qaysi fe'l qo'yiladi?",
+    "options": [
+     "учу",
+     "учит",
+     "учат",
+     "учим"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Понимать» fe'lining «ВЫ» shaxsidagi shakli qaysi?",
+    "options": [
+     "понимаете",
+     "понимаешь",
+     "понимают",
+     "понимаем"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Смотреть» fe'li qaysi tuslanishga kiradi (istisno)?",
+    "options": [
+     "II tuslanish",
+     "I tuslanish",
+     "Tuslanmaydi",
+     "III tuslanish"
+    ],
+    "correct": 0,
+    "explanation": "смотрю, смотришь, смотрят"
+   },
+   {
+    "q": "«Учить» (НСВ) fe'lining СВ jufti qaysi?",
+    "options": [
+     "выучить",
+     "научить",
+     "обучить",
+     "доучить"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Покупать» (НСВ) fe'lining СВ jufti qaysi?",
+    "options": [
+     "купить",
+     "докупить",
+     "скупить",
+     "выкупить"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Спрашивать» (НСВ) fe'lining СВ jufti qaysi?",
+    "options": [
+     "спросить",
+     "расспросить",
+     "переспросить",
+     "запросить"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Помогать» (НСВ) fe'lining СВ jufti qaysi?",
+    "options": [
+     "помочь",
+     "подпомочь",
+     "взпомочь",
+     "выпомочь"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Они ... русский язык» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "учат",
+     "учит",
+     "учите",
+     "учим"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Он ... правду» gapida «говорить» fe'lining shakli qaysi?",
+    "options": [
+     "говорит",
+     "говорят",
+     "говоришь",
+     "говорю"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мы ... музыку» gapida «слушать» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "слушаем",
+     "слушают",
+     "слушаете",
+     "слушает"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Быстро» so'zining antonimi qaysi?",
+    "options": [
+     "медленно",
+     "громко",
+     "тихо",
+     "вовремя"
+    ],
+    "correct": 0,
+    "explanation": ""
+   }
+  ]
+ },
+ {
+  "id": "t_l6",
+  "title": "6-dars testi: Predlojniy padej",
+  "lesson": 6,
+  "source": "7-dars fayli (sizning testingiz)",
+  "questions": [
+   {
+    "q": "Predlojniy padej (6-kelishik) makon ma'nosida qaysi asosiy so'roqqa javob beradi?",
+    "options": [
+     "Где? (Qayerda?)",
+     "Куда? (Qayerga?)",
+     "Откуда? (Qayerdan?)",
+     "Что? (Nima?)"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "Makon va joylashuvni ifodalashda Predlojniy padejda qaysi predloglar ishlatiladi?",
+    "options": [
+     "С va СО",
+     "В va НА",
+     "К va ПО",
+     "ИЗ va ДО"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Predlojniy padejda ko'pchilik birlikdagi otlar qanday umumiy qo'shimcha oladi?",
+    "options": [
+     "qo'shimchasi -У",
+     "qo'shimchasi -ОМ",
+     "qo'shimchasi -Е",
+     "qo'shimchasi -А"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«-ИЯ» bilan tugovchi ayol jinsi so'zlari (аудитория, Россия) Predlojniy padejda qanday qo'shimcha oladi?",
+    "options": [
+     "qo'shimchasi -Е",
+     "qo'shimchasi -ИЯ",
+     "qo'shimchasi -Я",
+     "qo'shimchasi -ИИ"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«-ИЕ» bilan tugovchi o'rta jins so'zlari (общежитие, здание) qanday qo'shimcha oladi?",
+    "options": [
+     "qo'shimchasi -ИИ",
+     "qo'shimchasi -Е",
+     "qo'shimchasi -Ю",
+     "qo'shimchasi -Я"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«-Ь» bilan tugovchi ayol jinsi so'zlari (тетрадь, площадь) qanday qo'shimcha oladi?",
+    "options": [
+     "qo'shimchasi -Е",
+     "qo'shimchasi -И",
+     "qo'shimchasi -Ю",
+     "qo'shimchasi -Я"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Shaharlar, davlatlar va yopiq binolar oldidan qaysi predlog ishlatiladi?",
+    "options": [
+     "НА predlogi",
+     "К predlogi",
+     "В predlogi",
+     "С predlogi"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "Ko'chalar, maydonlar va ochiq yuzalar oldidan qaysi predlog ishlatiladi?",
+    "options": [
+     "В predlogi",
+     "НА predlogi",
+     "ПО predlogi",
+     "ОТ predlogi"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "Tadbirlar, jarayonlar (урок, лекция, работа) oldidan qaysi predlog qo'yiladi?",
+    "options": [
+     "ПОД predlogi",
+     "В predlogi",
+     "ЗА predlogi",
+     "НА predlogi"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Сад» (bog') so'zi Predlojniy padejda qanday istisno shaklga kiradi?",
+    "options": [
+     "в саду́",
+     "в саде",
+     "на саду",
+     "на саде"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Лес» (o'rmon) so'zining Predlojniy shakli qaysi?",
+    "options": [
+     "в лесе",
+     "в лесу́",
+     "на лесу",
+     "на лесе"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Шкаф» (javon) so'zining Predlojniy shakli qaysi?",
+    "options": [
+     "в шкафе",
+     "на шкафе",
+     "в шкафу́",
+     "шкафом"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Пол» (pol / yer yuzasi) so'zining Predlojniy shakli qaysi?",
+    "options": [
+     "в полу",
+     "в поле",
+     "на поле",
+     "на полу́"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Берег» (qirg'oq) so'zining Predlojniy shakli qaysi?",
+    "options": [
+     "на берегу́",
+     "на береге",
+     "в береге",
+     "в берегу"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Аэропорт» so'zining Predlojniy shakli qaysi?",
+    "options": [
+     "на аэропорте",
+     "в аэропорту́",
+     "в аэропорте",
+     "аэропортом"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Мой брат учится ... университете» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "на",
+     "к",
+     "в",
+     "с"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Студенты сейчас сидят ... лекции» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "на",
+     "в",
+     "от",
+     "по"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Книга лежит ... столе» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "в",
+     "к",
+     "из",
+     "на"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Мы живём ... Самарканде» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "на",
+     "в",
+     "у",
+     "с"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Дети играют ... улице» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "по",
+     "к",
+     "на",
+     "в"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Отец работает ... заводе» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "на",
+     "в",
+     "от",
+     "при"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мама покупает продукты ... магазине» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "на",
+     "в",
+     "к",
+     "из"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Картина висит ... стене» gapida qaysi predlog to'g'ri?",
+    "options": [
+     "в",
+     "к",
+     "на",
+     "с"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Студенты живут ... общежитии» gapida qaysi shakl to'g'ri yozilgan?",
+    "options": [
+     "в общежитие",
+     "в общежитии",
+     "на общежитии",
+     "в общежитье"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Преподаватель стоит ... аудитории» gapida qaysi shakl to'g'ri yozilgan?",
+    "options": [
+     "в аудитории",
+     "в аудиторие",
+     "на аудитории",
+     "аудиторией"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Заметка написана ... тетради» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "в тетраде",
+     "на тетраде",
+     "в тетради",
+     "тетрадью"
+    ],
+    "correct": 2,
+    "explanation": ""
+   },
+   {
+    "q": "«Матч проходит ... стадионе» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "в стадионе",
+     "на стадионе",
+     "на стадиони",
+     "стадионом"
+    ],
+    "correct": 1,
+    "explanation": ""
+   },
+   {
+    "q": "«Поезд стоит ... вокзале» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "в вокзале",
+     "на вокзалу",
+     "вокзалом",
+     "на вокзале"
+    ],
+    "correct": 3,
+    "explanation": ""
+   },
+   {
+    "q": "«Мы отдыхали ... деревне» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "в деревне",
+     "на деревне",
+     "в деревни",
+     "деревней"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Одежда висит ... шкафу» gapida qaysi shakl to'g'ri?",
+    "options": [
+     "в шкафе",
+     "на шкафе",
+     "в шкафу",
+     "на шкафу"
+    ],
+    "correct": 2,
+    "explanation": ""
+   }
+  ]
+ }
+]

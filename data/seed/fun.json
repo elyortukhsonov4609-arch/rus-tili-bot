@@ -1,0 +1,332 @@
+[
+ {
+  "q": "Rus alifbosida nechta harf bor?",
+  "options": [
+   "33",
+   "30",
+   "32",
+   "36"
+  ],
+  "correct": 0,
+  "explanation": "10 unli, 21 undosh va 2 belgi (ь, ъ)"
+ },
+ {
+  "q": "Rus tilida nechta kelishik (падеж) bor?",
+  "options": [
+   "6",
+   "4",
+   "8",
+   "12"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Здравствуйте» so'zida qaysi harf talaffuz qilinmaydi?",
+  "options": [
+   "Birinchi «в»",
+   "«з»",
+   "«т»",
+   "«й»"
+  ],
+  "correct": 0,
+  "explanation": "[здрáствуйте] deb o'qiladi"
+ },
+ {
+  "q": "«Солнце» so'zida qaysi harf talaffuz qilinmaydi?",
+  "options": [
+   "«л»",
+   "«н»",
+   "«ц»",
+   "«с»"
+  ],
+  "correct": 0,
+  "explanation": "[сóнце] deb o'qiladi"
+ },
+ {
+  "q": "«Сердце» (yurak) so'zida qaysi harf talaffuz qilinmaydi?",
+  "options": [
+   "«д»",
+   "«р»",
+   "«ц»",
+   "«с»"
+  ],
+  "correct": 0,
+  "explanation": "[сéрце] deb o'qiladi"
+ },
+ {
+  "q": "«Ё» harfi bor so'zlarda urg'u qayerga tushadi?",
+  "options": [
+   "Doimo «ё» harfiga",
+   "Doimo birinchi bo'g'inga",
+   "Doimo oxirgi bo'g'inga",
+   "Urg'u tushmaydi"
+  ],
+  "correct": 0,
+  "explanation": "Masalan: ёлка, мёд, идёт"
+ },
+ {
+  "q": "«Ъ» belgisi rus tilida qanday nomlanadi?",
+  "options": [
+   "твёрдый знак",
+   "мягкий знак",
+   "краткий знак",
+   "точка"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Ь» belgisi rus tilida qanday nomlanadi?",
+  "options": [
+   "мягкий знак",
+   "твёрдый знак",
+   "краткий знак",
+   "запятая"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "Qaysi so'z ortiqcha: кот, собака, стол, корова?",
+  "options": [
+   "стол",
+   "кот",
+   "собака",
+   "корова"
+  ],
+  "correct": 0,
+  "explanation": "Стол — jonsiz (Что?), qolganlari jonli (Кто?)"
+ },
+ {
+  "q": "«Собака» so'ziga qaysi so'roq beriladi?",
+  "options": [
+   "Кто?",
+   "Что?",
+   "Где?",
+   "Чей?"
+  ],
+  "correct": 0,
+  "explanation": "Hayvonlarga ham «Кто?» so'rog'i beriladi"
+ },
+ {
+  "q": "Qaysi so'z faqat ko'plikda ishlatiladi?",
+  "options": [
+   "деньги",
+   "книги",
+   "столы",
+   "окна"
+  ],
+  "correct": 0,
+  "explanation": "«Деньги» (pul)ning birlik shakli yo'q"
+ },
+ {
+  "q": "«Часы» so'zi qaysi ma'noni bildiradi?",
+  "options": [
+   "soat (buyum)",
+   "soatlar (vaqt birligi)",
+   "daqiqa",
+   "kun"
+  ],
+  "correct": 0,
+  "explanation": "Часы — faqat ko'plikda ishlatiladi"
+ },
+ {
+  "q": "«Понедельник» qaysi kun?",
+  "options": [
+   "dushanba",
+   "yakshanba",
+   "juma",
+   "shanba"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Воскресенье» qaysi kun?",
+  "options": [
+   "yakshanba",
+   "dushanba",
+   "seshanba",
+   "juma"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Весна» qaysi fasl?",
+  "options": [
+   "bahor",
+   "qish",
+   "yoz",
+   "kuz"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Зима» qaysi fasl?",
+  "options": [
+   "qish",
+   "bahor",
+   "yoz",
+   "kuz"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Красный» qaysi rang?",
+  "options": [
+   "qizil",
+   "sariq",
+   "yashil",
+   "ko'k"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Зелёный» qaysi rang?",
+  "options": [
+   "yashil",
+   "qizil",
+   "oq",
+   "qora"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Сто» qaysi son?",
+  "options": [
+   "100",
+   "10",
+   "1000",
+   "70"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Тысяча» qaysi son?",
+  "options": [
+   "1000",
+   "100",
+   "10 000",
+   "1 000 000"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "Qaysi so'zda «я» harfi ikki tovush [ya] beradi?",
+  "options": [
+   "яблоко",
+   "мяч",
+   "пять",
+   "тётя"
+  ],
+  "correct": 0,
+  "explanation": "So'z boshida я → [ya]"
+ },
+ {
+  "q": "«Москва» so'zi qaysi jinsga mansub?",
+  "options": [
+   "Женский род",
+   "Мужской род",
+   "Средний род",
+   "Общий род"
+  ],
+  "correct": 0,
+  "explanation": "-а bilan tugaydi"
+ },
+ {
+  "q": "«Он шёл» qaysi fe'lning o'tgan zamoni?",
+  "options": [
+   "идти",
+   "шить",
+   "жить",
+   "ехать"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "Qaysi so'z «умница» kabi umumiy rodga (общий род) kiradi?",
+  "options": [
+   "соня",
+   "мама",
+   "папа",
+   "книга"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Спасибо» so'zining ma'nosi qaysi?",
+  "options": [
+   "rahmat",
+   "salom",
+   "xayr",
+   "iltimos"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Пожалуйста» so'zining asosiy ma'nolari qaysi?",
+  "options": [
+   "iltimos / marhamat",
+   "rahmat",
+   "kechirasiz",
+   "xayr"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«До свидания» qachon aytiladi?",
+  "options": [
+   "Xayrlashganda",
+   "Salomlashganda",
+   "Rahmat aytganda",
+   "Kechirim so'raganda"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«День» so'zining antonimi qaysi?",
+  "options": [
+   "ночь",
+   "утро",
+   "вечер",
+   "неделя"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Кафе», «метро», «пальто» so'zlarining umumiy xususiyati qaysi?",
+  "options": [
+   "Kelishik va sonda o'zgarmaydi",
+   "Faqat ko'plikda ishlatiladi",
+   "Erkak jinsiga mansub",
+   "Faqat birlikda ishlatiladi"
+  ],
+  "correct": 0,
+  "explanation": ""
+ },
+ {
+  "q": "«Ребята» so'zi qaysi ma'noda ishlatiladi?",
+  "options": [
+   "bolalar / yigitlar (do'stona murojaat)",
+   "ota-onalar",
+   "o'qituvchilar",
+   "qo'shnilar"
+  ],
+  "correct": 0,
+  "explanation": ""
+ }
+]

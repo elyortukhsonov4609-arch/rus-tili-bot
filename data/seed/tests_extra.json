@@ -1,0 +1,2227 @@
+[
+ {
+  "id": "t_l4",
+  "title": "4-dars testi: Egalik olmoshlari",
+  "lesson": 4,
+  "source": "🆕 Claude tuzgan",
+  "questions": [
+   {
+    "q": "«Чей?» so'rog'i qaysi jinsdagi otlarga beriladi?",
+    "options": [
+     "Erkak jinsi (мужской род)",
+     "Ayol jinsi (женский род)",
+     "O'rta jins (средний род)",
+     "Ko'plik"
+    ],
+    "correct": 0,
+    "explanation": "Чей? — m.r: Чей это стол?"
+   },
+   {
+    "q": "Qaysi otga «Чья?» so'rog'i beriladi?",
+    "options": [
+     "книга",
+     "стол",
+     "окно",
+     "книги"
+    ],
+    "correct": 0,
+    "explanation": "Книга — ayol jinsi: Чья это книга?"
+   },
+   {
+    "q": "Qaysi otga «Чьё?» so'rog'i beriladi?",
+    "options": [
+     "письмо",
+     "словарь",
+     "тетрадь",
+     "друзья"
+    ],
+    "correct": 0,
+    "explanation": "Письмо — o'rta jins: Чьё это письмо?"
+   },
+   {
+    "q": "«Чьи?» so'rog'i qachon ishlatiladi?",
+    "options": [
+     "Barcha jinsdagi ko'plik otlar uchun",
+     "Faqat erkak jinsidagi otlar uchun",
+     "Faqat o'rta jinsdagi otlar uchun",
+     "Faqat jonli otlar uchun"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«... это словарь?» — nuqtalar o'rniga qaysi so'roq qo'yiladi?",
+    "options": [
+     "Чей",
+     "Чья",
+     "Чьё",
+     "Чьи"
+    ],
+    "correct": 0,
+    "explanation": "Словарь — -ь bilan tugovchi erkak jinsi"
+   },
+   {
+    "q": "«... это тетрадь?» — nuqtalar o'rniga qaysi so'roq qo'yiladi?",
+    "options": [
+     "Чья",
+     "Чей",
+     "Чьё",
+     "Чьи"
+    ],
+    "correct": 0,
+    "explanation": "Тетрадь — -ь bilan tugovchi ayol jinsi"
+   },
+   {
+    "q": "«... это пальто?» — nuqtalar o'rniga qaysi so'roq qo'yiladi?",
+    "options": [
+     "Чьё",
+     "Чей",
+     "Чья",
+     "Чьи"
+    ],
+    "correct": 0,
+    "explanation": "Пальто — o'zgarmas o'rta jins oti"
+   },
+   {
+    "q": "«... это очки?» — nuqtalar o'rniga qaysi so'roq qo'yiladi?",
+    "options": [
+     "Чьи",
+     "Чей",
+     "Чья",
+     "Чьё"
+    ],
+    "correct": 0,
+    "explanation": "Очки faqat ko'plikda ishlatiladi"
+   },
+   {
+    "q": "«Это ... комната» (mening) — to'g'ri shaklni tanlang:",
+    "options": [
+     "моя",
+     "мой",
+     "моё",
+     "мои"
+    ],
+    "correct": 0,
+    "explanation": "Комната — ayol jinsi"
+   },
+   {
+    "q": "«Это ... письмо» (sening) — to'g'ri shaklni tanlang:",
+    "options": [
+     "твоё",
+     "твой",
+     "твоя",
+     "твои"
+    ],
+    "correct": 0,
+    "explanation": "Письмо — o'rta jins"
+   },
+   {
+    "q": "«Это ... класс» (bizning) — to'g'ri shaklni tanlang:",
+    "options": [
+     "наш",
+     "наша",
+     "наше",
+     "наши"
+    ],
+    "correct": 0,
+    "explanation": "Класс — erkak jinsi"
+   },
+   {
+    "q": "«Это ... здание» (bizning) — to'g'ri shaklni tanlang:",
+    "options": [
+     "наше",
+     "наш",
+     "наша",
+     "наши"
+    ],
+    "correct": 0,
+    "explanation": "Здание — o'rta jins"
+   },
+   {
+    "q": "«Это ... дети» (sizning) — to'g'ri shaklni tanlang:",
+    "options": [
+     "ваши",
+     "ваш",
+     "ваша",
+     "ваше"
+    ],
+    "correct": 0,
+    "explanation": "Дети — ko'plik"
+   },
+   {
+    "q": "«Это ... семья» (sizning) — to'g'ri shaklni tanlang:",
+    "options": [
+     "ваша",
+     "ваш",
+     "ваше",
+     "ваши"
+    ],
+    "correct": 0,
+    "explanation": "Семья — ayol jinsi"
+   },
+   {
+    "q": "«Uning (o'g'il bolaning) daftari» rus tilida qanday bo'ladi?",
+    "options": [
+     "его тетрадь",
+     "её тетрадь",
+     "их тетрадь",
+     "моя тетрадь"
+    ],
+    "correct": 0,
+    "explanation": "Его — erkak kishiga tegishli, o'zgarmaydi"
+   },
+   {
+    "q": "«Uning (qiz bolaning) akasi» rus tilida qanday bo'ladi?",
+    "options": [
+     "её брат",
+     "его брат",
+     "их брат",
+     "ваш брат"
+    ],
+    "correct": 0,
+    "explanation": "Её — ayol kishiga tegishli, o'zgarmaydi"
+   },
+   {
+    "q": "«Ularning maktabi» rus tilida qanday bo'ladi?",
+    "options": [
+     "их школа",
+     "ихняя школа",
+     "его школа",
+     "её школа"
+    ],
+    "correct": 0,
+    "explanation": "Их hech qachon o'zgarmaydi; «ихняя» xato shakl"
+   },
+   {
+    "q": "Qaysi olmosh rod va songa qarab o'zgarmaydi?",
+    "options": [
+     "её",
+     "мой",
+     "наш",
+     "твой"
+    ],
+    "correct": 0,
+    "explanation": "Его, её, их — o'zgarmas olmoshlar"
+   },
+   {
+    "q": "Qaysi birikmada egalik olmoshi XATO ishlatilgan?",
+    "options": [
+     "твоя словарь",
+     "их окно",
+     "наши друзья",
+     "моё имя"
+    ],
+    "correct": 0,
+    "explanation": "Словарь erkak jinsi: твой словарь"
+   },
+   {
+    "q": "Qaysi qatorda «olmosh + sifat + ot» to'g'ri moslashgan?",
+    "options": [
+     "моя синяя ручка",
+     "мой синяя ручка",
+     "моя синий ручка",
+     "моё синее ручка"
+    ],
+    "correct": 0,
+    "explanation": "Ручка — ayol jinsi: моя синяя ручка"
+   },
+   {
+    "q": "«Наше ... общежитие» — nuqtalar o'rniga qaysi sifat qo'yiladi?",
+    "options": [
+     "новое",
+     "новый",
+     "новая",
+     "новые"
+    ],
+    "correct": 0,
+    "explanation": "Общежитие — o'rta jins"
+   },
+   {
+    "q": "«Мои ... друзья» — nuqtalar o'rniga qaysi sifat qo'yiladi?",
+    "options": [
+     "хорошие",
+     "хороший",
+     "хорошая",
+     "хорошее"
+    ],
+    "correct": 0,
+    "explanation": "Друзья — ko'plik; ш dan keyin -ие"
+   },
+   {
+    "q": "«Чьи это книги? (я)» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это мои книги.",
+     "Это мой книги.",
+     "Это моя книги.",
+     "Это моё книги."
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Чья это машина? (они)» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это их машина.",
+     "Это ихняя машина.",
+     "Это его машина.",
+     "Это её машина."
+    ],
+    "correct": 0,
+    "explanation": "Они → их (o'zgarmaydi)"
+   },
+   {
+    "q": "«Чьё это письмо? (он)» savoliga to'g'ri javob qaysi?",
+    "options": [
+     "Это его письмо.",
+     "Это её письмо.",
+     "Это их письмо.",
+     "Это моё письмо."
+    ],
+    "correct": 0,
+    "explanation": "Он → его"
+   },
+   {
+    "q": "«Bu sizning pasportingizmi?» jumlasining to'g'ri tarjimasi qaysi?",
+    "options": [
+     "Это ваш паспорт?",
+     "Это ваша паспорт?",
+     "Это ваше паспорт?",
+     "Это ваши паспорт?"
+    ],
+    "correct": 0,
+    "explanation": "Паспорт — erkak jinsi"
+   },
+   {
+    "q": "«Mening do'stlarim shu yerda yashaydi» jumlasining to'g'ri tarjimasi qaysi?",
+    "options": [
+     "Мои друзья живут здесь.",
+     "Мой друзья живут здесь.",
+     "Моя друзья живёт здесь.",
+     "Мои друг живут здесь."
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Bizning o'qituvchilarimiz» birikmasining to'g'ri tarjimasi qaysi?",
+    "options": [
+     "наши учителя",
+     "наш учителя",
+     "наша учителя",
+     "наше учителя"
+    ],
+    "correct": 0,
+    "explanation": "Учителя — ko'plik (urg'uli -я)"
+   },
+   {
+    "q": "«Твой» olmoshining ko'plik shakli qaysi?",
+    "options": [
+     "твои",
+     "твоя",
+     "твоё",
+     "твоих"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Ваша» olmoshi qaysi jinsdagi otga mos keladi?",
+    "options": [
+     "Ayol jinsi (женский род)",
+     "Erkak jinsi (мужской род)",
+     "O'rta jins (средний род)",
+     "Ko'plik"
+    ],
+    "correct": 0,
+    "explanation": "Ваша комната, ваша школа"
+   }
+  ]
+ },
+ {
+  "id": "t_l7",
+  "title": "7-dars testi: O'tgan zamon",
+  "lesson": 7,
+  "source": "🆕 Claude tuzgan",
+  "questions": [
+   {
+    "q": "Rus tilida o'tgan zamonda fe'l nimaga qarab o'zgaradi?",
+    "options": [
+     "Gap egasining rodi (jinsi) va soniga",
+     "Shaxsga (я, ты, он, мы...)",
+     "Kelishikka",
+     "Hech qanday o'zgarmaydi"
+    ],
+    "correct": 0,
+    "explanation": "O'tgan zamon shaxsga emas, rod va songa qaraydi"
+   },
+   {
+    "q": "O'tgan zamon shakli qanday yasaladi?",
+    "options": [
+     "-ТЬ o'rniga -Л, -ЛА, -ЛО, -ЛИ qo'shiladi",
+     "-ТЬ o'rniga -У, -ЕШЬ, -ЕТ qo'shiladi",
+     "Fe'l oldiga «был» qo'yiladi",
+     "-ТЬ o'rniga -Е qo'shiladi"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Читать» fe'lining erkak jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "читал",
+     "читала",
+     "читало",
+     "читали"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Писать» fe'lining ayol jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "писала",
+     "писал",
+     "писало",
+     "писали"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Мы, вы, они» bilan o'tgan zamonda fe'l qaysi qo'shimchani oladi?",
+    "options": [
+     "-ЛИ",
+     "-Л",
+     "-ЛА",
+     "-ЛО"
+    ],
+    "correct": 0,
+    "explanation": "Ko'plikda rodning ahamiyati yo'q: doimo -ли"
+   },
+   {
+    "q": "«Мама вчера ... ужин» gapida «готовить» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "готовила",
+     "готовил",
+     "готовило",
+     "готовили"
+    ],
+    "correct": 0,
+    "explanation": "Мама — ayol jinsi → -ла"
+   },
+   {
+    "q": "«Студенты ... диктант» gapida «писать» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "писали",
+     "писал",
+     "писала",
+     "писало"
+    ],
+    "correct": 0,
+    "explanation": "Студенты — ko'plik → -ли"
+   },
+   {
+    "q": "«Окно ... открыто» gapida «быть» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "было",
+     "был",
+     "была",
+     "были"
+    ],
+    "correct": 0,
+    "explanation": "Окно — o'rta jins → -ло"
+   },
+   {
+    "q": "Qiz bola «Men kitob o'qidim» deganda qaysi shakl to'g'ri?",
+    "options": [
+     "Я читала книгу.",
+     "Я читал книгу.",
+     "Я читало книгу.",
+     "Я читали книгу."
+    ],
+    "correct": 0,
+    "explanation": "Gapiruvchi ayol kishi → -ла"
+   },
+   {
+    "q": "«Мы ... на море» gapida «отдыхать» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "отдыхали",
+     "отдыхал",
+     "отдыхала",
+     "отдыхало"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Нести» fe'lining erkak jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "нёс",
+     "нёсл",
+     "нестил",
+     "несил"
+    ],
+    "correct": 0,
+    "explanation": "-ти bilan tugagan fe'llarda m.r da -л tushib qoladi"
+   },
+   {
+    "q": "«Мочь» fe'lining erkak jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "мог",
+     "мочл",
+     "мочьл",
+     "можл"
+    ],
+    "correct": 0,
+    "explanation": "-чь fe'llarida m.r da -г / -к ga aylanadi"
+   },
+   {
+    "q": "«Идти» fe'lining ayol jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "шла",
+     "идла",
+     "шёла",
+     "идтила"
+    ],
+    "correct": 0,
+    "explanation": "Идти — o'zagi butunlay o'zgaradi: шёл, шла, шло, шли"
+   },
+   {
+    "q": "«Идти» fe'lining ko'plikdagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "шли",
+     "идли",
+     "шёли",
+     "идтили"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Везти» fe'lining ayol jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "везла",
+     "вёзла",
+     "везила",
+     "везтла"
+    ],
+    "correct": 0,
+    "explanation": "он вёз, она везла, они везли"
+   },
+   {
+    "q": "«Расти» fe'lining erkak jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "рос",
+     "растл",
+     "расл",
+     "рости"
+    ],
+    "correct": 0,
+    "explanation": "он рос, она росла, они росли"
+   },
+   {
+    "q": "«Привыкнуть» fe'lining erkak jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "привык",
+     "привыкнул",
+     "привыкнл",
+     "привыкл"
+    ],
+    "correct": 0,
+    "explanation": "-нуть fe'llarida m.r da -ну- va -л tushadi"
+   },
+   {
+    "q": "«Брат ... в лицее» gapida «учиться» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "учился",
+     "училась",
+     "училось",
+     "учились"
+    ],
+    "correct": 0,
+    "explanation": "Undoshdan (л) keyin -ся"
+   },
+   {
+    "q": "«Сестра ... спортом» gapida «заниматься» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "занималась",
+     "занимался",
+     "занималось",
+     "занимались"
+    ],
+    "correct": 0,
+    "explanation": "Unlidan (а) keyin -сь"
+   },
+   {
+    "q": "Qaytma fe'llarda o'tgan zamonda -СЯ va -СЬ qanday tanlanadi?",
+    "options": [
+     "Undoshdan keyin -ся, unlidan keyin -сь",
+     "Unlidan keyin -ся, undoshdan keyin -сь",
+     "Doimo -ся yoziladi",
+     "Doimo -сь yoziladi"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Быть» fe'lining ayol jinsidagi o'tgan zamon shakli qaysi?",
+    "options": [
+     "была",
+     "был",
+     "было",
+     "были"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«У меня ... свободное время» gapida «быть» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "было",
+     "был",
+     "была",
+     "были"
+    ],
+    "correct": 0,
+    "explanation": "Время — o'rta jins → было"
+   },
+   {
+    "q": "«Вчера погода ... тёплая» gapida «быть» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "была",
+     "был",
+     "было",
+     "были"
+    ],
+    "correct": 0,
+    "explanation": "Погода — ayol jinsi"
+   },
+   {
+    "q": "«Где вы ... в прошлую субботу?» gapida «быть» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "были",
+     "был",
+     "была",
+     "было"
+    ],
+    "correct": 0,
+    "explanation": "Вы → doimo -ли"
+   },
+   {
+    "q": "«Не была» birikmasida urg'u qaysi bo'g'inga tushadi?",
+    "options": [
+     "Oxiriga: не былá",
+     "Boshiga: нé была",
+     "O'rtasiga: не бы́ла",
+     "Urg'u tushmaydi"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Дерево ... в саду» gapida «расти» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "росло",
+     "рос",
+     "росла",
+     "росли"
+    ],
+    "correct": 0,
+    "explanation": "Дерево — o'rta jins"
+   },
+   {
+    "q": "Qaysi so'z o'tgan zamon ko'rsatkichi hisoblanadi?",
+    "options": [
+     "вчера",
+     "завтра",
+     "сейчас",
+     "скоро"
+    ],
+    "correct": 0,
+    "explanation": "вчера — kecha"
+   },
+   {
+    "q": "«В прошлом году» birikmasining tarjimasi qaysi?",
+    "options": [
+     "o'tgan yili",
+     "kelgusi yili",
+     "shu yili",
+     "har yili"
+    ],
+    "correct": 0,
+    "explanation": ""
+   },
+   {
+    "q": "«Отец ... тяжёлую сумку» gapida «нести» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "нёс",
+     "несла",
+     "несли",
+     "несло"
+    ],
+    "correct": 0,
+    "explanation": "Отец — erkak jinsi: нёс"
+   },
+   {
+    "q": "«Бабушка ... вкусные пироги» gapida «печь» fe'lining to'g'ri shakli qaysi?",
+    "options": [
+     "пекла",
+     "пёк",
+     "пекли",
+     "пекло"
+    ],
+    "correct": 0,
+    "explanation": "Бабушка — ayol jinsi: пекла"
+   }
+  ]
+ },
+ {
+  "id": "t_vocab15",
+  "title": "1–5-darslar lug'at testi (140 so'z)",
+  "lesson": "vocab15",
+  "source": "🆕 Sizning 140 so'zlik kalitingiz asosida Claude tuzgan",
+  "questions": [
+   {
+    "q": "«словарь» so'zining tarjimasi qaysi?",
+    "options": [
+     "lug'at",
+     "daftar",
+     "stul",
+     "bobo"
+    ],
+    "correct": 0,
+    "explanation": "словарь — lug'at (erkak jinsi)"
+   },
+   {
+    "q": "«o'qituvchi / ustoz» so'zining ruschasi qaysi?",
+    "options": [
+     "преподаватель",
+     "друг",
+     "жизнь",
+     "паспорта"
+    ],
+    "correct": 0,
+    "explanation": "преподаватель — o'qituvchi / ustoz (erkak jinsi)"
+   },
+   {
+    "q": "«тетрадь» so'zining tarjimasi qaysi?",
+    "options": [
+     "daftar",
+     "soat",
+     "yig'loqi",
+     "pullar"
+    ],
+    "correct": 0,
+    "explanation": "тетрадь — daftar (ayol jinsi)"
+   },
+   {
+    "q": "«maydon» so'zining ruschasi qaysi?",
+    "options": [
+     "площадь",
+     "море",
+     "учителя",
+     "часы"
+    ],
+    "correct": 0,
+    "explanation": "площадь — maydon (ayol jinsi)"
+   },
+   {
+    "q": "«дверь» so'zining tarjimasi qaysi?",
+    "options": [
+     "eshik",
+     "yigit kishi",
+     "bobo",
+     "tun"
+    ],
+    "correct": 0,
+    "explanation": "дверь — eshik (ayol jinsi)"
+   },
+   {
+    "q": "«karavot» so'zining ruschasi qaysi?",
+    "options": [
+     "кровать",
+     "дочь",
+     "стул",
+     "конь"
+    ],
+    "correct": 0,
+    "explanation": "кровать — karavot (ayol jinsi)"
+   },
+   {
+    "q": "«ночь» so'zining tarjimasi qaysi?",
+    "options": [
+     "tun",
+     "barg",
+     "ko'zoynak",
+     "bola / go'dak"
+    ],
+    "correct": 0,
+    "explanation": "ночь — tun (ayol jinsi)"
+   },
+   {
+    "q": "«qiz farzand» so'zining ruschasi qaysi?",
+    "options": [
+     "дочь",
+     "стулья",
+     "море",
+     "профессор"
+    ],
+    "correct": 0,
+    "explanation": "дочь — qiz farzand (ayol jinsi)"
+   },
+   {
+    "q": "«вещь» so'zining tarjimasi qaysi?",
+    "options": [
+     "buyum / narsa",
+     "o'g'illar",
+     "o'qituvchi / ustoz",
+     "xat"
+    ],
+    "correct": 0,
+    "explanation": "вещь — buyum / narsa (ayol jinsi)"
+   },
+   {
+    "q": "«sichqon» so'zining ruschasi qaysi?",
+    "options": [
+     "мышь",
+     "здание",
+     "ребёнок",
+     "города"
+    ],
+    "correct": 0,
+    "explanation": "мышь — sichqon (ayol jinsi)"
+   },
+   {
+    "q": "«конь» so'zining tarjimasi qaysi?",
+    "options": [
+     "ot / tulpor",
+     "dada / ota",
+     "quyosh",
+     "yomg'ir"
+    ],
+    "correct": 0,
+    "explanation": "конь — ot / tulpor (erkak jinsi)"
+   },
+   {
+    "q": "«yomg'ir» so'zining ruschasi qaysi?",
+    "options": [
+     "дождь",
+     "яблоки",
+     "дядя",
+     "папа"
+    ],
+    "correct": 0,
+    "explanation": "дождь — yomg'ir (erkak jinsi)"
+   },
+   {
+    "q": "«здание» so'zining tarjimasi qaysi?",
+    "options": [
+     "bino",
+     "daftar",
+     "tun",
+     "bola / go'dak"
+    ],
+    "correct": 0,
+    "explanation": "здание — bino (o'rta jins)"
+   },
+   {
+    "q": "«vaqt» so'zining ruschasi qaysi?",
+    "options": [
+     "время",
+     "стул",
+     "плакса",
+     "окно"
+    ],
+    "correct": 0,
+    "explanation": "время — vaqt (o'rta jins)"
+   },
+   {
+    "q": "«имя» so'zining tarjimasi qaysi?",
+    "options": [
+     "ism",
+     "suv",
+     "xat",
+     "poyezd"
+    ],
+    "correct": 0,
+    "explanation": "имя — ism (o'rta jins)"
+   },
+   {
+    "q": "«bayroq» so'zining ruschasi qaysi?",
+    "options": [
+     "знамя",
+     "окно",
+     "листья",
+     "молоко"
+    ],
+    "correct": 0,
+    "explanation": "знамя — bayroq (o'rta jins)"
+   },
+   {
+    "q": "«солнце» so'zining tarjimasi qaysi?",
+    "options": [
+     "quyosh",
+     "o'g'illar",
+     "bola / go'dak",
+     "yigit kishi"
+    ],
+    "correct": 0,
+    "explanation": "солнце — quyosh (o'rta jins)"
+   },
+   {
+    "q": "«dengiz» so'zining ruschasi qaysi?",
+    "options": [
+     "море",
+     "города",
+     "лист",
+     "брюки"
+    ],
+    "correct": 0,
+    "explanation": "море — dengiz (o'rta jins)"
+   },
+   {
+    "q": "«поле» so'zining tarjimasi qaysi?",
+    "options": [
+     "dala",
+     "aka-ukalar",
+     "poyezd",
+     "ko'zoynak"
+    ],
+    "correct": 0,
+    "explanation": "поле — dala (o'rta jins)"
+   },
+   {
+    "q": "«deraza» so'zining ruschasi qaysi?",
+    "options": [
+     "окно",
+     "паспорт",
+     "здание",
+     "деньги"
+    ],
+    "correct": 0,
+    "explanation": "окно — deraza (o'rta jins)"
+   },
+   {
+    "q": "«письмо» so'zining tarjimasi qaysi?",
+    "options": [
+     "xat",
+     "do'stlar",
+     "amaki / tog'a",
+     "bino"
+    ],
+    "correct": 0,
+    "explanation": "письмо — xat (o'rta jins)"
+   },
+   {
+    "q": "«hayot» so'zining ruschasi qaysi?",
+    "options": [
+     "жизнь",
+     "люди",
+     "солнце",
+     "знамя"
+    ],
+    "correct": 0,
+    "explanation": "жизнь — hayot (ayol jinsi)"
+   },
+   {
+    "q": "«умница» so'zining tarjimasi qaysi?",
+    "options": [
+     "aqlli / dono",
+     "poyezd",
+     "o'qituvchilar",
+     "qaychi"
+    ],
+    "correct": 0,
+    "explanation": "умница — aqlli / dono (umumiy rod)"
+   },
+   {
+    "q": "«uyquchi» so'zining ruschasi qaysi?",
+    "options": [
+     "соня",
+     "дедушка",
+     "жадина",
+     "поле"
+    ],
+    "correct": 0,
+    "explanation": "соня — uyquchi (umumiy rod)"
+   },
+   {
+    "q": "«плакса» so'zining tarjimasi qaysi?",
+    "options": [
+     "yig'loqi",
+     "sichqon",
+     "tun",
+     "uyquchi"
+    ],
+    "correct": 0,
+    "explanation": "плакса — yig'loqi (umumiy rod)"
+   },
+   {
+    "q": "«qizg'anchiq» so'zining ruschasi qaysi?",
+    "options": [
+     "жадина",
+     "паспорт",
+     "здание",
+     "дедушка"
+    ],
+    "correct": 0,
+    "explanation": "жадина — qizg'anchiq (umumiy rod)"
+   },
+   {
+    "q": "«юноша» so'zining tarjimasi qaysi?",
+    "options": [
+     "yigit kishi",
+     "inson / odam",
+     "xat",
+     "ism"
+    ],
+    "correct": 0,
+    "explanation": "юноша — yigit kishi (erkak jinsi)"
+   },
+   {
+    "q": "«bobo» so'zining ruschasi qaysi?",
+    "options": [
+     "дедушка",
+     "время",
+     "преподаватель",
+     "знамя"
+    ],
+    "correct": 0,
+    "explanation": "дедушка — bobo (erkak jinsi)"
+   },
+   {
+    "q": "«папа» so'zining tarjimasi qaysi?",
+    "options": [
+     "dada / ota",
+     "bola / go'dak",
+     "xat",
+     "maydon"
+    ],
+    "correct": 0,
+    "explanation": "папа — dada / ota (erkak jinsi)"
+   },
+   {
+    "q": "«amaki / tog'a» so'zining ruschasi qaysi?",
+    "options": [
+     "дядя",
+     "город",
+     "сахар",
+     "кино"
+    ],
+    "correct": 0,
+    "explanation": "дядя — amaki / tog'a (erkak jinsi)"
+   },
+   {
+    "q": "«кофе» so'zining tarjimasi qaysi?",
+    "options": [
+     "qahva",
+     "professor",
+     "bayroq",
+     "shahar"
+    ],
+    "correct": 0,
+    "explanation": "кофе — qahva (erkak jinsi - istisno)"
+   },
+   {
+    "q": "«palto» so'zining ruschasi qaysi?",
+    "options": [
+     "пальто",
+     "города",
+     "дом",
+     "город"
+    ],
+    "correct": 0,
+    "explanation": "пальто — palto (o'rta jins - o'zgarmas)"
+   },
+   {
+    "q": "«метро» so'zining tarjimasi qaysi?",
+    "options": [
+     "metro",
+     "bino",
+     "olma",
+     "o'qituvchi"
+    ],
+    "correct": 0,
+    "explanation": "метро — metro (o'rta jins - o'zgarmas)"
+   },
+   {
+    "q": "«kino» so'zining ruschasi qaysi?",
+    "options": [
+     "кино",
+     "друг",
+     "окно",
+     "город"
+    ],
+    "correct": 0,
+    "explanation": "кино — kino (o'rta jins - o'zgarmas)"
+   },
+   {
+    "q": "«кафе» so'zining tarjimasi qaysi?",
+    "options": [
+     "kafe",
+     "deraza",
+     "dengiz",
+     "tun"
+    ],
+    "correct": 0,
+    "explanation": "кафе — kafe (o'rta jins - o'zgarmas)"
+   },
+   {
+    "q": "«inson / odam» so'zining ruschasi qaysi?",
+    "options": [
+     "человек",
+     "здание",
+     "учитель",
+     "профессора"
+    ],
+    "correct": 0,
+    "explanation": "человек — inson / odam (birlik)"
+   },
+   {
+    "q": "«люди» so'zining tarjimasi qaysi?",
+    "options": [
+     "odamlar",
+     "o'g'il farzand",
+     "dala",
+     "quyosh"
+    ],
+    "correct": 0,
+    "explanation": "люди — odamlar (ko'plik)"
+   },
+   {
+    "q": "«bola / go'dak» so'zining ruschasi qaysi?",
+    "options": [
+     "ребёнок",
+     "тетрадь",
+     "сын",
+     "письмо"
+    ],
+    "correct": 0,
+    "explanation": "ребёнок — bola / go'dak (birlik)"
+   },
+   {
+    "q": "«дети» so'zining tarjimasi qaysi?",
+    "options": [
+     "bolalar",
+     "inson / odam",
+     "o'qituvchi / ustoz",
+     "tun"
+    ],
+    "correct": 0,
+    "explanation": "дети — bolalar (ko'plik)"
+   },
+   {
+    "q": "«do'st» so'zining ruschasi qaysi?",
+    "options": [
+     "друг",
+     "метро",
+     "деньги",
+     "учителя"
+    ],
+    "correct": 0,
+    "explanation": "друг — do'st (birlik)"
+   },
+   {
+    "q": "«друзья» so'zining tarjimasi qaysi?",
+    "options": [
+     "do'stlar",
+     "bola / go'dak",
+     "olma",
+     "bobo"
+    ],
+    "correct": 0,
+    "explanation": "друзья — do'stlar (ko'plik)"
+   },
+   {
+    "q": "«aka / uka» so'zining ruschasi qaysi?",
+    "options": [
+     "брат",
+     "кофе",
+     "стулья",
+     "сын"
+    ],
+    "correct": 0,
+    "explanation": "брат — aka / uka (birlik)"
+   },
+   {
+    "q": "«братья» so'zining tarjimasi qaysi?",
+    "options": [
+     "aka-ukalar",
+     "poyezdlar",
+     "ot / tulpor",
+     "do'st"
+    ],
+    "correct": 0,
+    "explanation": "братья — aka-ukalar (ko'plik)"
+   },
+   {
+    "q": "«stul» so'zining ruschasi qaysi?",
+    "options": [
+     "стул",
+     "сыновья",
+     "города",
+     "пальто"
+    ],
+    "correct": 0,
+    "explanation": "стул — stul (birlik)"
+   },
+   {
+    "q": "«стулья» so'zining tarjimasi qaysi?",
+    "options": [
+     "stullar",
+     "kafe",
+     "deraza",
+     "aqlli / dono"
+    ],
+    "correct": 0,
+    "explanation": "стулья — stullar (ko'plik)"
+   },
+   {
+    "q": "«daraxt» so'zining ruschasi qaysi?",
+    "options": [
+     "дерево",
+     "море",
+     "друг",
+     "брат"
+    ],
+    "correct": 0,
+    "explanation": "дерево — daraxt (birlik)"
+   },
+   {
+    "q": "«деревья» so'zining tarjimasi qaysi?",
+    "options": [
+     "daraxtlar",
+     "odamlar",
+     "karavot",
+     "eshik"
+    ],
+    "correct": 0,
+    "explanation": "деревья — daraxtlar (ko'plik)"
+   },
+   {
+    "q": "«barg» so'zining ruschasi qaysi?",
+    "options": [
+     "лист",
+     "знамя",
+     "кофе",
+     "площадь"
+    ],
+    "correct": 0,
+    "explanation": "лист — barg (birlik)"
+   },
+   {
+    "q": "«листья» so'zining tarjimasi qaysi?",
+    "options": [
+     "barglar",
+     "sichqon",
+     "uy",
+     "yigit kishi"
+    ],
+    "correct": 0,
+    "explanation": "листья — barglar (ko'plik)"
+   },
+   {
+    "q": "«o'g'il farzand» so'zining ruschasi qaysi?",
+    "options": [
+     "сын",
+     "профессор",
+     "дерево",
+     "лист"
+    ],
+    "correct": 0,
+    "explanation": "сын — o'g'il farzand (birlik)"
+   },
+   {
+    "q": "«сыновья» so'zining tarjimasi qaysi?",
+    "options": [
+     "o'g'illar",
+     "qaychi",
+     "poyezd",
+     "metro"
+    ],
+    "correct": 0,
+    "explanation": "сыновья — o'g'illar (ko'plik)"
+   },
+   {
+    "q": "«uy» so'zining ruschasi qaysi?",
+    "options": [
+     "дом",
+     "юноша",
+     "учитель",
+     "дедушка"
+    ],
+    "correct": 0,
+    "explanation": "дом — uy (birlik)"
+   },
+   {
+    "q": "«дома» so'zining tarjimasi qaysi?",
+    "options": [
+     "uylar",
+     "bino",
+     "dengiz",
+     "quyosh"
+    ],
+    "correct": 0,
+    "explanation": "дома — uylar (ko'plik - urg'uli a)"
+   },
+   {
+    "q": "«shahar» so'zining ruschasi qaysi?",
+    "options": [
+     "город",
+     "дядя",
+     "окно",
+     "папа"
+    ],
+    "correct": 0,
+    "explanation": "город — shahar (birlik)"
+   },
+   {
+    "q": "«города» so'zining tarjimasi qaysi?",
+    "options": [
+     "shaharlar",
+     "yomg'ir",
+     "sichqon",
+     "aka / uka"
+    ],
+    "correct": 0,
+    "explanation": "города — shaharlar (ko'plik)"
+   },
+   {
+    "q": "«poyezd» so'zining ruschasi qaysi?",
+    "options": [
+     "поезд",
+     "поле",
+     "ножницы",
+     "метро"
+    ],
+    "correct": 0,
+    "explanation": "поезд — poyezd (birlik)"
+   },
+   {
+    "q": "«поезда» so'zining tarjimasi qaysi?",
+    "options": [
+     "poyezdlar",
+     "qizg'anchiq",
+     "o'g'illar",
+     "o'qituvchi"
+    ],
+    "correct": 0,
+    "explanation": "поезда — poyezdlar (ko'plik)"
+   },
+   {
+    "q": "«pasport» so'zining ruschasi qaysi?",
+    "options": [
+     "паспорт",
+     "дома",
+     "профессора",
+     "папа"
+    ],
+    "correct": 0,
+    "explanation": "паспорт — pasport (birlik)"
+   },
+   {
+    "q": "«паспорта» so'zining tarjimasi qaysi?",
+    "options": [
+     "pasportlar",
+     "do'st",
+     "yigit kishi",
+     "o'qituvchilar"
+    ],
+    "correct": 0,
+    "explanation": "паспорта — pasportlar (ko'plik)"
+   },
+   {
+    "q": "«professor» so'zining ruschasi qaysi?",
+    "options": [
+     "профессор",
+     "друг",
+     "люди",
+     "деревья"
+    ],
+    "correct": 0,
+    "explanation": "профессор — professor (birlik)"
+   },
+   {
+    "q": "«профессора» so'zining tarjimasi qaysi?",
+    "options": [
+     "professorlar",
+     "ko'zoynak",
+     "dala",
+     "barglar"
+    ],
+    "correct": 0,
+    "explanation": "профессора — professorlar (ko'plik)"
+   },
+   {
+    "q": "«o'qituvchi» so'zining ruschasi qaysi?",
+    "options": [
+     "учитель",
+     "ночь",
+     "человек",
+     "поле"
+    ],
+    "correct": 0,
+    "explanation": "учитель — o'qituvchi (birlik)"
+   },
+   {
+    "q": "«учителя» so'zining tarjimasi qaysi?",
+    "options": [
+     "o'qituvchilar",
+     "poyezd",
+     "uy",
+     "maydon"
+    ],
+    "correct": 0,
+    "explanation": "учителя — o'qituvchilar (ko'plik)"
+   },
+   {
+    "q": "«olma» so'zining ruschasi qaysi?",
+    "options": [
+     "яблоко",
+     "поле",
+     "имя",
+     "поезда"
+    ],
+    "correct": 0,
+    "explanation": "яблоко — olma (birlik)"
+   },
+   {
+    "q": "«яблоки» so'zining tarjimasi qaysi?",
+    "options": [
+     "olmalar",
+     "deraza",
+     "stullar",
+     "o'qituvchi"
+    ],
+    "correct": 0,
+    "explanation": "яблоки — olmalar (ko'plik)"
+   },
+   {
+    "q": "«ko'zoynak» so'zining ruschasi qaysi?",
+    "options": [
+     "очки",
+     "время",
+     "дядя",
+     "дом"
+    ],
+    "correct": 0,
+    "explanation": "очки — ko'zoynak (faqat ko'plikda)"
+   },
+   {
+    "q": "«ножницы» so'zining tarjimasi qaysi?",
+    "options": [
+     "qaychi",
+     "quyosh",
+     "ism",
+     "olmalar"
+    ],
+    "correct": 0,
+    "explanation": "ножницы — qaychi (faqat ko'plikda)"
+   },
+   {
+    "q": "«shim» so'zining ruschasi qaysi?",
+    "options": [
+     "брюки",
+     "дом",
+     "очки",
+     "стулья"
+    ],
+    "correct": 0,
+    "explanation": "брюки — shim (faqat ko'plikda)"
+   },
+   {
+    "q": "«часы» so'zining tarjimasi qaysi?",
+    "options": [
+     "soat",
+     "ism",
+     "dada / ota",
+     "amaki / tog'a"
+    ],
+    "correct": 0,
+    "explanation": "часы — soat (faqat ko'plikda)"
+   },
+   {
+    "q": "«pullar» so'zining ruschasi qaysi?",
+    "options": [
+     "деньги",
+     "море",
+     "ножницы",
+     "кафе"
+    ],
+    "correct": 0,
+    "explanation": "деньги — pullar (faqat ko'plikda)"
+   },
+   {
+    "q": "«сахар» so'zining tarjimasi qaysi?",
+    "options": [
+     "shakar",
+     "bola / go'dak",
+     "buyum / narsa",
+     "metro"
+    ],
+    "correct": 0,
+    "explanation": "сахар — shakar (faqat birlikda)"
+   },
+   {
+    "q": "«sut» so'zining ruschasi qaysi?",
+    "options": [
+     "молоко",
+     "море",
+     "города",
+     "сыновья"
+    ],
+    "correct": 0,
+    "explanation": "молоко — sut (faqat birlikda)"
+   },
+   {
+    "q": "«вода» so'zining tarjimasi qaysi?",
+    "options": [
+     "suv",
+     "olmalar",
+     "ot / tulpor",
+     "bola / go'dak"
+    ],
+    "correct": 0,
+    "explanation": "вода — suv (faqat birlikda)"
+   },
+   {
+    "q": "«какой?» so'zining tarjimasi qaysi?",
+    "options": [
+     "qanday? (erkak jinsi)",
+     "qanday? (ayol jinsi)",
+     "qanday? (o'rta jins)",
+     "qanday? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "какой? — qanday? (erkak jinsi)"
+   },
+   {
+    "q": "«какая?» so'zining tarjimasi qaysi?",
+    "options": [
+     "qanday? (ayol jinsi)",
+     "qanday? (erkak jinsi)",
+     "qanday? (o'rta jins)",
+     "qanday? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "какая? — qanday? (ayol jinsi)"
+   },
+   {
+    "q": "«какое?» so'zining tarjimasi qaysi?",
+    "options": [
+     "qanday? (o'rta jins)",
+     "qanday? (erkak jinsi)",
+     "qanday? (ayol jinsi)",
+     "qanday? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "какое? — qanday? (o'rta jins)"
+   },
+   {
+    "q": "«какие?» so'zining tarjimasi qaysi?",
+    "options": [
+     "qanday? (ko'plik)",
+     "qanday? (erkak jinsi)",
+     "qanday? (ayol jinsi)",
+     "qanday? (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "какие? — qanday? (ko'plik)"
+   },
+   {
+    "q": "«katta» so'zining ruschasi qaysi?",
+    "options": [
+     "большой",
+     "горячий",
+     "холодный",
+     "маленький"
+    ],
+    "correct": 0,
+    "explanation": "большой — katta"
+   },
+   {
+    "q": "«маленький» so'zining tarjimasi qaysi?",
+    "options": [
+     "kichik / mayda",
+     "yaxshi",
+     "qimmat / qadrli",
+     "oq"
+    ],
+    "correct": 0,
+    "explanation": "маленький — kichik / mayda"
+   },
+   {
+    "q": "«yangi» so'zining ruschasi qaysi?",
+    "options": [
+     "новый",
+     "умный",
+     "большой",
+     "синий"
+    ],
+    "correct": 0,
+    "explanation": "новый — yangi"
+   },
+   {
+    "q": "«старый» so'zining tarjimasi qaysi?",
+    "options": [
+     "eski",
+     "past",
+     "to'q ko'k",
+     "keng / katta"
+    ],
+    "correct": 0,
+    "explanation": "старый — eski"
+   },
+   {
+    "q": "«yaxshi» so'zining ruschasi qaysi?",
+    "options": [
+     "хороший",
+     "синий",
+     "большой",
+     "дешёвый"
+    ],
+    "correct": 0,
+    "explanation": "хороший — yaxshi"
+   },
+   {
+    "q": "«плохой» so'zining tarjimasi qaysi?",
+    "options": [
+     "yomon",
+     "qaynoq / issiq",
+     "aqlli",
+     "kichik / mayda"
+    ],
+    "correct": 0,
+    "explanation": "плохой — yomon"
+   },
+   {
+    "q": "«chiroyli» so'zining ruschasi qaysi?",
+    "options": [
+     "красивый",
+     "современный",
+     "хороший",
+     "общий"
+    ],
+    "correct": 0,
+    "explanation": "красивый — chiroyli"
+   },
+   {
+    "q": "«умный» so'zining tarjimasi qaysi?",
+    "options": [
+     "aqlli",
+     "ahil / inoq",
+     "mehribon",
+     "yomon"
+    ],
+    "correct": 0,
+    "explanation": "умный — aqlli"
+   },
+   {
+    "q": "«ahmoq / nodon» so'zining ruschasi qaysi?",
+    "options": [
+     "глупый",
+     "лёгкий",
+     "просторный",
+     "горячий"
+    ],
+    "correct": 0,
+    "explanation": "глупый — ahmoq / nodon"
+   },
+   {
+    "q": "«добрый» so'zining tarjimasi qaysi?",
+    "options": [
+     "mehribon",
+     "talabalar shaharchasi",
+     "kichik / mayda",
+     "keng / katta"
+    ],
+    "correct": 0,
+    "explanation": "добрый — mehribon"
+   },
+   {
+    "q": "«yovuz / jahldor» so'zining ruschasi qaysi?",
+    "options": [
+     "злой",
+     "хороший",
+     "умный",
+     "общий"
+    ],
+    "correct": 0,
+    "explanation": "злой — yovuz / jahldor"
+   },
+   {
+    "q": "«тёплый» so'zining tarjimasi qaysi?",
+    "options": [
+     "iliq",
+     "talabalar shaharchasi",
+     "sovuq",
+     "umumiy"
+    ],
+    "correct": 0,
+    "explanation": "тёплый — iliq"
+   },
+   {
+    "q": "«sovuq» so'zining ruschasi qaysi?",
+    "options": [
+     "холодный",
+     "добрый",
+     "синий",
+     "отличный результат"
+    ],
+    "correct": 0,
+    "explanation": "холодный — sovuq"
+   },
+   {
+    "q": "«горячий» so'zining tarjimasi qaysi?",
+    "options": [
+     "qaynoq / issiq",
+     "qimmat / qadrli",
+     "mehribon",
+     "aqlli"
+    ],
+    "correct": 0,
+    "explanation": "горячий — qaynoq / issiq"
+   },
+   {
+    "q": "«barra / yangi» so'zining ruschasi qaysi?",
+    "options": [
+     "свежий",
+     "просторный",
+     "дорогой",
+     "высокий"
+    ],
+    "correct": 0,
+    "explanation": "свежий — barra / yangi (non, gazeta)"
+   },
+   {
+    "q": "«высокий» so'zining tarjimasi qaysi?",
+    "options": [
+     "baland",
+     "qimmat / qadrli",
+     "ahil / inoq",
+     "qaynoq / issiq"
+    ],
+    "correct": 0,
+    "explanation": "высокий — baland"
+   },
+   {
+    "q": "«past» so'zining ruschasi qaysi?",
+    "options": [
+     "низкий",
+     "большой",
+     "отличный результат",
+     "трудный"
+    ],
+    "correct": 0,
+    "explanation": "низкий — past"
+   },
+   {
+    "q": "«дорогой» so'zining tarjimasi qaysi?",
+    "options": [
+     "qimmat / qadrli",
+     "oq",
+     "zamonaviy",
+     "qaynoq / issiq"
+    ],
+    "correct": 0,
+    "explanation": "дорогой — qimmat / qadrli"
+   },
+   {
+    "q": "«arzon» so'zining ruschasi qaysi?",
+    "options": [
+     "дешёвый",
+     "научный журнал",
+     "трудный",
+     "белый"
+    ],
+    "correct": 0,
+    "explanation": "дешёвый — arzon"
+   },
+   {
+    "q": "«трудный» so'zining tarjimasi qaysi?",
+    "options": [
+     "qiyin / murakkab",
+     "a'lo natija",
+     "zamonaviy",
+     "yangi"
+    ],
+    "correct": 0,
+    "explanation": "трудный — qiyin / murakkab"
+   },
+   {
+    "q": "«oson / yengil» so'zining ruschasi qaysi?",
+    "options": [
+     "лёгкий",
+     "высокий",
+     "современный",
+     "чёрный"
+    ],
+    "correct": 0,
+    "explanation": "лёгкий — oson / yengil"
+   },
+   {
+    "q": "«синий» so'zining tarjimasi qaysi?",
+    "options": [
+     "to'q ko'k",
+     "ahil / inoq",
+     "keng / katta",
+     "qiyin / murakkab"
+    ],
+    "correct": 0,
+    "explanation": "синий — to'q ko'k"
+   },
+   {
+    "q": "«oq» so'zining ruschasi qaysi?",
+    "options": [
+     "белый",
+     "высокий",
+     "низкий",
+     "чёрный"
+    ],
+    "correct": 0,
+    "explanation": "белый — oq"
+   },
+   {
+    "q": "«чёрный» so'zining tarjimasi qaysi?",
+    "options": [
+     "qora",
+     "kichik / mayda",
+     "oson / yengil",
+     "chiroyli"
+    ],
+    "correct": 0,
+    "explanation": "чёрный — qora"
+   },
+   {
+    "q": "«zamonaviy» so'zining ruschasi qaysi?",
+    "options": [
+     "современный",
+     "маленький",
+     "горячий",
+     "хороший"
+    ],
+    "correct": 0,
+    "explanation": "современный — zamonaviy"
+   },
+   {
+    "q": "«университетский городок» so'zining tarjimasi qaysi?",
+    "options": [
+     "talabalar shaharchasi",
+     "yangi",
+     "aqlli",
+     "ilmiy jurnal"
+    ],
+    "correct": 0,
+    "explanation": "университетский городок — talabalar shaharchasi"
+   },
+   {
+    "q": "«ilmiy jurnal» so'zining ruschasi qaysi?",
+    "options": [
+     "научный журнал",
+     "глупый",
+     "злой",
+     "общий"
+    ],
+    "correct": 0,
+    "explanation": "научный журнал — ilmiy jurnal"
+   },
+   {
+    "q": "«отличный результат» so'zining tarjimasi qaysi?",
+    "options": [
+     "a'lo natija",
+     "kichik / mayda",
+     "talabalar shaharchasi",
+     "yomon"
+    ],
+    "correct": 0,
+    "explanation": "отличный результат — a'lo natija"
+   },
+   {
+    "q": "«чей?» so'zining tarjimasi qaysi?",
+    "options": [
+     "kimning? (erkak jinsi)",
+     "kimning? (ayol jinsi)",
+     "kimning? (o'rta jins)",
+     "kimning? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "чей? — kimning? (erkak jinsi)"
+   },
+   {
+    "q": "«чья?» so'zining tarjimasi qaysi?",
+    "options": [
+     "kimning? (ayol jinsi)",
+     "kimning? (erkak jinsi)",
+     "kimning? (o'rta jins)",
+     "kimning? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "чья? — kimning? (ayol jinsi)"
+   },
+   {
+    "q": "«чьё?» so'zining tarjimasi qaysi?",
+    "options": [
+     "kimning? (o'rta jins)",
+     "kimning? (erkak jinsi)",
+     "kimning? (ayol jinsi)",
+     "kimning? (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "чьё? — kimning? (o'rta jins)"
+   },
+   {
+    "q": "«чьи?» so'zining tarjimasi qaysi?",
+    "options": [
+     "kimning? (ko'plik)",
+     "kimning? (erkak jinsi)",
+     "kimning? (ayol jinsi)",
+     "kimning? (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "чьи? — kimning? (ko'plik)"
+   },
+   {
+    "q": "«мой» so'zining tarjimasi qaysi?",
+    "options": [
+     "mening (erkak jinsi)",
+     "mening (ayol jinsi)",
+     "mening (o'rta jins)",
+     "mening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "мой — mening (erkak jinsi)"
+   },
+   {
+    "q": "«моя» so'zining tarjimasi qaysi?",
+    "options": [
+     "mening (ayol jinsi)",
+     "mening (erkak jinsi)",
+     "mening (o'rta jins)",
+     "mening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "моя — mening (ayol jinsi)"
+   },
+   {
+    "q": "«моё» so'zining tarjimasi qaysi?",
+    "options": [
+     "mening (o'rta jins)",
+     "mening (erkak jinsi)",
+     "mening (ayol jinsi)",
+     "mening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "моё — mening (o'rta jins)"
+   },
+   {
+    "q": "«мои» so'zining tarjimasi qaysi?",
+    "options": [
+     "mening (ko'plik)",
+     "mening (erkak jinsi)",
+     "mening (ayol jinsi)",
+     "mening (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "мои — mening (ko'plik)"
+   },
+   {
+    "q": "«твой» so'zining tarjimasi qaysi?",
+    "options": [
+     "sening (erkak jinsi)",
+     "sening (ayol jinsi)",
+     "sening (o'rta jins)",
+     "sening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "твой — sening (erkak jinsi)"
+   },
+   {
+    "q": "«твоя» so'zining tarjimasi qaysi?",
+    "options": [
+     "sening (ayol jinsi)",
+     "sening (erkak jinsi)",
+     "sening (o'rta jins)",
+     "sening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "твоя — sening (ayol jinsi)"
+   },
+   {
+    "q": "«твоё» so'zining tarjimasi qaysi?",
+    "options": [
+     "sening (o'rta jins)",
+     "sening (erkak jinsi)",
+     "sening (ayol jinsi)",
+     "sening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "твоё — sening (o'rta jins)"
+   },
+   {
+    "q": "«твои» so'zining tarjimasi qaysi?",
+    "options": [
+     "sening (ko'plik)",
+     "sening (erkak jinsi)",
+     "sening (ayol jinsi)",
+     "sening (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "твои — sening (ko'plik)"
+   },
+   {
+    "q": "«наш» so'zining tarjimasi qaysi?",
+    "options": [
+     "bizning (erkak jinsi)",
+     "bizning (ayol jinsi)",
+     "bizning (o'rta jins)",
+     "bizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "наш — bizning (erkak jinsi)"
+   },
+   {
+    "q": "«наша» so'zining tarjimasi qaysi?",
+    "options": [
+     "bizning (ayol jinsi)",
+     "bizning (erkak jinsi)",
+     "bizning (o'rta jins)",
+     "bizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "наша — bizning (ayol jinsi)"
+   },
+   {
+    "q": "«наше» so'zining tarjimasi qaysi?",
+    "options": [
+     "bizning (o'rta jins)",
+     "bizning (erkak jinsi)",
+     "bizning (ayol jinsi)",
+     "bizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "наше — bizning (o'rta jins)"
+   },
+   {
+    "q": "«наши» so'zining tarjimasi qaysi?",
+    "options": [
+     "bizning (ko'plik)",
+     "bizning (erkak jinsi)",
+     "bizning (ayol jinsi)",
+     "bizning (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "наши — bizning (ko'plik)"
+   },
+   {
+    "q": "«ваш» so'zining tarjimasi qaysi?",
+    "options": [
+     "sizning (erkak jinsi)",
+     "sizning (ayol jinsi)",
+     "sizning (o'rta jins)",
+     "sizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "ваш — sizning (erkak jinsi)"
+   },
+   {
+    "q": "«ваша» so'zining tarjimasi qaysi?",
+    "options": [
+     "sizning (ayol jinsi)",
+     "sizning (erkak jinsi)",
+     "sizning (o'rta jins)",
+     "sizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "ваша — sizning (ayol jinsi)"
+   },
+   {
+    "q": "«ваше» so'zining tarjimasi qaysi?",
+    "options": [
+     "sizning (o'rta jins)",
+     "sizning (erkak jinsi)",
+     "sizning (ayol jinsi)",
+     "sizning (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "ваше — sizning (o'rta jins)"
+   },
+   {
+    "q": "«ваши» so'zining tarjimasi qaysi?",
+    "options": [
+     "sizning (ko'plik)",
+     "sizning (erkak jinsi)",
+     "sizning (ayol jinsi)",
+     "sizning (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "ваши — sizning (ko'plik)"
+   },
+   {
+    "q": "«его» so'zining tarjimasi qaysi?",
+    "options": [
+     "uning (erkak kishi)",
+     "uning (ayol kishi)",
+     "sizning (ko'plik)",
+     "mening (ko'plik)"
+    ],
+    "correct": 0,
+    "explanation": "его — uning (erkak kishining - o'zgarmas)"
+   },
+   {
+    "q": "«её» so'zining tarjimasi qaysi?",
+    "options": [
+     "uning (ayol kishi)",
+     "uning (erkak kishi)",
+     "bizning (ko'plik)",
+     "sening (o'rta jins)"
+    ],
+    "correct": 0,
+    "explanation": "её — uning (ayol kishining - o'zgarmas)"
+   },
+   {
+    "q": "«их» so'zining tarjimasi qaysi?",
+    "options": [
+     "ularning (o'zgarmas)",
+     "sizning (erkak jinsi)",
+     "mening (o'rta jins)",
+     "bizning (ayol jinsi)"
+    ],
+    "correct": 0,
+    "explanation": "их — ularning (o'zgarmas)"
+   },
+   {
+    "q": "«общий» so'zining tarjimasi qaysi?",
+    "options": [
+     "umumiy",
+     "ahmoq / nodon",
+     "qimmat / qadrli",
+     "mehribon"
+    ],
+    "correct": 0,
+    "explanation": "общий — umumiy"
+   },
+   {
+    "q": "«keng / katta» so'zining ruschasi qaysi?",
+    "options": [
+     "просторный",
+     "высокий",
+     "отличный результат",
+     "старый"
+    ],
+    "correct": 0,
+    "explanation": "просторный — keng / katta"
+   },
+   {
+    "q": "«дружный» so'zining tarjimasi qaysi?",
+    "options": [
+     "ahil / inoq",
+     "chiroyli",
+     "qimmat / qadrli",
+     "yomon"
+    ],
+    "correct": 0,
+    "explanation": "дружный — ahil / inoq"
+   },
+   {
+    "q": "«o'qimoq» so'zining ruschasi qaysi?",
+    "options": [
+     "читать",
+     "написать",
+     "учить",
+     "делать"
+    ],
+    "correct": 0,
+    "explanation": "читать — o'qimoq (jarayon - НСВ)"
+   },
+   {
+    "q": "«прочитать» so'zining tarjimasi qaysi?",
+    "options": [
+     "o'qib chiqmoq",
+     "bajarib bo'lmoq",
+     "o'rganmoq / yodlamoq",
+     "yozmoq"
+    ],
+    "correct": 0,
+    "explanation": "прочитать — o'qib chiqmoq (natija - СВ)"
+   },
+   {
+    "q": "«yozmoq» so'zining ruschasi qaysi?",
+    "options": [
+     "писать",
+     "прочитать",
+     "выучить",
+     "читать"
+    ],
+    "correct": 0,
+    "explanation": "писать — yozmoq (jarayon - НСВ)"
+   },
+   {
+    "q": "«написать» so'zining tarjimasi qaysi?",
+    "options": [
+     "yozib bo'lmoq",
+     "qilmoq / bajarmoq",
+     "gapirmoq",
+     "o'qib chiqmoq"
+    ],
+    "correct": 0,
+    "explanation": "написать — yozib bo'lmoq (natija - СВ)"
+   },
+   {
+    "q": "«o'rganmoq / yodlamoq» so'zining ruschasi qaysi?",
+    "options": [
+     "учить",
+     "прочитать",
+     "сделать",
+     "писать"
+    ],
+    "correct": 0,
+    "explanation": "учить — o'rganmoq / yodlamoq (НСВ)"
+   },
+   {
+    "q": "«выучить» so'zining tarjimasi qaysi?",
+    "options": [
+     "yodlab olmoq",
+     "o'qib chiqmoq",
+     "qilmoq / bajarmoq",
+     "yozmoq"
+    ],
+    "correct": 0,
+    "explanation": "выучить — yodlab olmoq (СВ)"
+   },
+   {
+    "q": "«qilmoq / bajarmoq» so'zining ruschasi qaysi?",
+    "options": [
+     "делать",
+     "читать",
+     "выучить",
+     "прочитать"
+    ],
+    "correct": 0,
+    "explanation": "делать — qilmoq / bajarmoq (НСВ)"
+   },
+   {
+    "q": "«сделать» so'zining tarjimasi qaysi?",
+    "options": [
+     "bajarib bo'lmoq",
+     "o'qib chiqmoq",
+     "yodlab olmoq",
+     "yozmoq"
+    ],
+    "correct": 0,
+    "explanation": "сделать — bajarib bo'lmoq (СВ)"
+   },
+   {
+    "q": "«gapirmoq» so'zining ruschasi qaysi?",
+    "options": [
+     "говорить",
+     "делать",
+     "писать",
+     "читать"
+    ],
+    "correct": 0,
+    "explanation": "говорить — gapirmoq (НСВ)"
+   }
+  ],
+  "per_attempt": 30
+ }
+]
