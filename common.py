@@ -18,6 +18,11 @@ BTN_TESTS = "📝 Testlar"
 BTN_RESULTS = "📊 Natijalarim"
 BTN_RATING = "🏆 Reyting"
 BTN_ADMIN = "⚙️ Admin panel"
+BTN_DAILY = "📅 Bugungi vazifa"
+BTN_PARENT = "📊 Haftalik hisobot"
+BTN_PARENT_OLD = "👨‍👩‍👦 Ota-onani ulash"  # eski menyu tugmasi (telefonlarda qolgan bo'lishi mumkin)
+BTN_CHILD_REPORT = "📊 Farzandim hisoboti"
+MENU_BUTTONS = {BTN_LESSONS, BTN_TESTS, BTN_RESULTS, BTN_RATING, BTN_ADMIN, BTN_DAILY, BTN_PARENT, BTN_PARENT_OLD, BTN_CHILD_REPORT}
 
 
 def is_admin(uid: int) -> bool:
@@ -48,11 +53,24 @@ class PrivateChat(BaseFilter):
 
 
 def main_menu(uid: int) -> ReplyKeyboardMarkup:
-    rows = [[KeyboardButton(text=BTN_LESSONS), KeyboardButton(text=BTN_TESTS)],
-            [KeyboardButton(text=BTN_RESULTS), KeyboardButton(text=BTN_RATING)]]
+    rows = [[KeyboardButton(text=BTN_DAILY)],
+            [KeyboardButton(text=BTN_LESSONS), KeyboardButton(text=BTN_TESTS)],
+            [KeyboardButton(text=BTN_RESULTS), KeyboardButton(text=BTN_RATING)],
+            [KeyboardButton(text=BTN_PARENT)]]
     if is_admin(uid):
         rows.append([KeyboardButton(text=BTN_ADMIN)])
     return ReplyKeyboardMarkup(keyboard=rows, resize_keyboard=True)
+
+
+async def approve_rows(uid: int) -> list:
+    """Arizani tasdiqlash tugmalari: har bir guruh uchun alohida ✅ + ❌."""
+    rows = [[(f"✅ {g['name']}", f"adm:ok:{uid}:{g['id']}") for g in await db.study_groups()]]
+    rows.append([("❌ Rad etish", f"adm:no:{uid}")])
+    return rows
+
+
+def parent_menu() -> ReplyKeyboardMarkup:
+    return ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text=BTN_CHILD_REPORT)]], resize_keyboard=True)
 
 
 def kb(rows: list[list[tuple[str, str]]]) -> InlineKeyboardMarkup:

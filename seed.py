@@ -50,3 +50,41 @@ async def seed_if_empty():
         await db.execute("INSERT INTO fun_questions(q, options, correct, explanation) VALUES(?,?,?,?)",
                          (q["q"], json.dumps(q["options"], ensure_ascii=False), q["correct"], q.get("explanation", "")))
     log.info("Yuklandi: %d dars, %d test, %d qiziqarli savol", len(lessons), len(tests), len(fun))
+
+
+async def seed_kichik():
+    """Kichik guruh darslari va testlarini (data/seed/kichik_v1.json) bir marta qo'shadi.
+
+    Ishlab turgan bazaga ham qo'shiladi: «content_kichik_v1» belgisi bo'lmasa. Kichik guruhda o'qituvchi
+    o'zi qo'shgan darslar bo'lsa, yangilari ulardan keyingi raqamlar bilan qo'shiladi. Mavjud test id lari
+    o'tkazib yuboriladi.
+    """
+    if await db.get_setting("content_kichik_v1"):
+        return
+    path = SEED_DIR / "kichik_v1.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    gid = 2
+    row = await db.fetchone("SELECT COALESCE(MAX(num), 0) AS m FROM lessons WHERE group_id=?", (gid,))
+    offset = int(row["m"] or 0)
+    num_to_id = {}
+    for les in data["lessons"]:
+        num = les["num"] + offset
+        lid = await db.execute("INSERT INTO lessons(num, title, short, group_id) VALUES(?,?,?,?)",
+                               (num, les["title"], les["short"], gid))
+        num_to_id[les["num"]] = lid
+        for i, page in enumerate(les["pages"]):
+            await db.execute("INSERT INTO lesson_pages(lesson_id, idx, html) VALUES(?,?,?)", (lid, i, page))
+    n_tests = 0
+    for t in data["tests"]:
+        if await db.fetchone("SELECT 1 FROM tests WHERE id=?", (t["id"],)):
+            continue
+        await db.execute("INSERT INTO tests(id, title, lesson_id, sort, per_attempt, source, group_id) "
+                         "VALUES(?,?,?,?,?,?,?)",
+                         (t["id"], t["title"], num_to_id.get(t["lesson"]), t["sort"] + offset * 10,
+                          t["per_attempt"], t.get("source"), gid))
+        await db.replace_questions(t["id"], t["questions"])
+        n_tests += 1
+    await db.set_setting("content_kichik_v1", "1")
+    log.info("Kichik guruh mazmuni qo'shildi: %d dars, %d test", len(data["lessons"]), n_tests)

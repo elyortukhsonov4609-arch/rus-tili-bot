@@ -9,7 +9,7 @@ from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import CallbackQuery, Message, ReplyKeyboardRemove
 
 import db
-from common import (BTN_LESSONS, BTN_RATING, BTN_RESULTS, BTN_TESTS, Approved, PrivateChat, chunk_text, fmt_dur,
+from common import (approve_rows, BTN_LESSONS, BTN_RATING, BTN_RESULTS, BTN_TESTS, Approved, PrivateChat, chunk_text, fmt_dur,
                     is_admin, kb, main_menu, pct, safe_answer, safe_edit)
 from config import ADMIN_IDS
 from quiz import mistakes_text, quiz
@@ -34,7 +34,9 @@ async def cmd_start(msg: Message, state: FSMContext):
         return
     u = await db.get_user(uid)
     if u and u["status"] == "approved":
-        await msg.answer(f"👋 Xush kelibsiz, {html.escape(u['full_name'])}!\nQuyidagi bo'limlardan birini tanlang.",
+        from daily import streak, streak_line
+        await msg.answer(f"👋 Xush kelibsiz, {html.escape(u['full_name'])}! ({html.escape(await db.group_name(u['group_id']))})\n"
+                         f"{streak_line(await streak(uid))}\n\nQuyidagi bo'limlardan birini tanlang.",
                          reply_markup=main_menu(uid))
     elif u and u["status"] == "pending":
         await msg.answer("⏳ Arizangiz ko'rib chiqilmoqda. Admin ruxsat bergach, sizga xabar keladi.")
@@ -44,7 +46,8 @@ async def cmd_start(msg: Message, state: FSMContext):
         await state.set_state(Reg.name)
         await msg.answer("👋 Assalomu alaykum! Bu bot rus tili darslari va testlari uchun.\n\n"
                          "Botdan foydalanish uchun o'qituvchi ruxsati kerak.\n"
-                         "✍️ <b>Ism va familiyangizni</b> yozib yuboring (masalan: <i>Aliyev Sardor</i>):",
+                         "✍️ <b>O'quvchining ism va familiyasini</b> yozib yuboring (masalan: <i>Aliyev Sardor</i>).\n"
+                         "<i>Farzandingiz sizning telefoningizdan foydalansa ham, uning ismini yozing.</i>",
                          reply_markup=ReplyKeyboardRemove())
 
 
@@ -52,7 +55,7 @@ async def cmd_start(msg: Message, state: FSMContext):
 async def reg_name(msg: Message, state: FSMContext, bot: Bot):
     name = " ".join(msg.text.split())
     if len(name) < 3 or len(name) > 60 or name.startswith("/"):
-        await msg.answer("Iltimos, ism va familiyangizni to'g'ri yozing (3–60 belgi).")
+        await msg.answer("Iltimos, o'quvchining ism va familiyasini to'g'ri yozing (3–60 belgi).")
         return
     await state.clear()
     uid = msg.from_user.id
@@ -63,7 +66,7 @@ async def reg_name(msg: Message, state: FSMContext, bot: Bot):
         try:
             await bot.send_message(
                 admin, f"🆕 <b>Yangi ariza</b>\n👤 {html.escape(name)}\n🔗 {uname}\n🆔 <code>{uid}</code>",
-                reply_markup=kb([[("✅ Ruxsat berish", f"adm:ok:{uid}"), ("❌ Rad etish", f"adm:no:{uid}")]]))
+                reply_markup=kb(await approve_rows(uid)))
         except Exception:  # noqa: BLE001 — admin botni bloklagan bo'lishi mumkin
             pass
 
@@ -106,12 +109,31 @@ async def cmd_help(msg: Message):
                      reply_markup=main_menu(msg.from_user.id))
 
 
+# ---------------- guruh bo'yicha ajratish ----------------
+async def gfilter(uid: int, alias: str = "") -> tuple[str, tuple]:
+    """O'quvchi faqat o'z guruhining darslari/testlarini ko'radi. Admin — hammasini."""
+    if is_admin(uid):
+        return "", ()
+    col = f"{alias}.group_id" if alias else "group_id"
+    return f" AND {col}=?", (await db.user_group(uid),)
+
+
+async def allowed(uid: int, row) -> bool:
+    return is_admin(uid) or row["group_id"] == await db.user_group(uid)
+
+
+async def gtag(uid: int, gid) -> str:
+    """Admin uchun yorliq: [Katta guruh]."""
+    return f"[{await db.group_name(gid)}] " if is_admin(uid) else ""
+
+
 # ---------------- Darslar ----------------
 async def lessons_markup(uid: int):
-    lessons = await db.fetchall("SELECT * FROM lessons WHERE is_open=1 ORDER BY num")
+    where, args = await gfilter(uid)
+    lessons = await db.fetchall(f"SELECT * FROM lessons WHERE is_open=1{where} ORDER BY group_id, num", args)
     read = {r["lesson_id"] for r in await db.fetchall("SELECT lesson_id FROM lesson_reads WHERE user_id=?", (uid,))}
-    rows = [[(f"{'✅' if l['id'] in read else '📖'} {l['num']}-dars: {l['short']}", f"les:open:{l['id']}:0")]
-            for l in lessons]
+    rows = [[(f"{'✅' if l['id'] in read else '📖'} {await gtag(uid, l['group_id'])}{l['num']}-dars: {l['short']}",
+              f"les:open:{l['id']}:0")] for l in lessons]
     return rows
 
 
@@ -138,7 +160,7 @@ async def lesson_page(cb: CallbackQuery):
     _, _, lid, page = cb.data.split(":")
     lid, page = int(lid), int(page)
     les = await db.fetchone("SELECT * FROM lessons WHERE id=?", (lid,))
-    if not les or (not les["is_open"] and not is_admin(cb.from_user.id)):
+    if not les or (not les["is_open"] and not is_admin(cb.from_user.id)) or not await allowed(cb.from_user.id, les):
         await cb.answer("Bu dars hozircha yopiq.", show_alert=True)
         return
     pages = await db.fetchall("SELECT html FROM lesson_pages WHERE lesson_id=? ORDER BY idx", (lid,))
@@ -190,8 +212,9 @@ async def lesson_done(cb: CallbackQuery):
 
 # ---------------- Testlar ----------------
 async def tests_markup(uid: int):
+    where, args = await gfilter(uid, "t")
     tests = await db.fetchall("SELECT t.*, l.num AS lnum FROM tests t LEFT JOIN lessons l ON l.id=t.lesson_id "
-                              "WHERE t.is_open=1 ORDER BY t.sort, t.title")
+                              f"WHERE t.is_open=1{where} ORDER BY t.group_id, t.sort, t.title", args)
     read = {r["lesson_id"] for r in await db.fetchall("SELECT lesson_id FROM lesson_reads WHERE user_id=?", (uid,))}
     need_read = await db.get_int("require_read") and not is_admin(uid)
     best = {r["test_id"]: r for r in await db.fetchall(
@@ -205,7 +228,7 @@ async def tests_markup(uid: int):
             icon = f"✅{round(best[t['id']]['r'] * 100)}%"
         else:
             icon = "📝"
-        rows.append([(f"{icon} {t['title']}", f"tst:intro:{t['id']}")])
+        rows.append([(f"{icon} {await gtag(uid, t['group_id'])}{t['title']}", f"tst:intro:{t['id']}")])
     return rows
 
 
@@ -230,7 +253,7 @@ async def test_intro(cb: CallbackQuery):
     uid = cb.from_user.id
     t = await db.fetchone("SELECT t.*, l.num AS lnum, l.short AS lshort FROM tests t "
                           "LEFT JOIN lessons l ON l.id=t.lesson_id WHERE t.id=?", (tid,))
-    if not t or (not t["is_open"] and not is_admin(uid)):
+    if not t or (not t["is_open"] and not is_admin(uid)) or not await allowed(uid, t):
         await cb.answer("Bu test hozircha yopiq.", show_alert=True)
         return
     if t["lesson_id"] and await db.get_int("require_read") and not is_admin(uid):
@@ -311,8 +334,9 @@ async def my_results(msg: Message):
 
 @app.message(F.text == BTN_RATING)
 async def rating_menu(msg: Message):
-    tests = await db.fetchall("SELECT * FROM tests WHERE is_open=1 ORDER BY sort")
-    rows = [[(f"🏆 {t['title']}", f"rank:{t['id']}")] for t in tests]
+    where, args = await gfilter(msg.from_user.id)
+    tests = await db.fetchall(f"SELECT * FROM tests WHERE is_open=1{where} ORDER BY group_id, sort", args)
+    rows = [[(f"🏆 {await gtag(msg.from_user.id, t['group_id'])}{t['title']}", f"rank:{t['id']}")] for t in tests]
     await msg.answer("🏆 Qaysi test reytingini ko'rmoqchisiz?", reply_markup=kb(rows) if rows else None)
 
 

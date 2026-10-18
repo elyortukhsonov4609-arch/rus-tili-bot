@@ -19,11 +19,14 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.types import BotCommand, BotCommandScopeAllGroupChats, BotCommandScopeAllPrivateChats
 
 import admin
+import cron
+import daily
 import db
 import group
+import parents
 import student
 from config import ADMIN_IDS, BOT_TOKEN
-from seed import seed_if_empty
+from seed import seed_if_empty, seed_kichik
 
 ALLOWED = ["message", "callback_query", "poll_answer", "my_chat_member"]
 WEBHOOK_BASE = (os.getenv("WEBHOOK_URL") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/")
@@ -64,13 +67,16 @@ async def main():
 
     await db.connect()
     await seed_if_empty()
+    await db.migrate()
+    await seed_kichik()
     # oldingi ishga tushirishdan qolib ketgan tugallanmagan testlar
     await db.execute("UPDATE attempts SET status='abandoned' WHERE status='active'")
 
     bot = Bot(BOT_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     dp = Dispatcher(storage=MemoryStorage())
     # Tartib muhim: admin → ro'yxatdan o'tish → o'quvchi → guruh → ruxsatsizlar uchun ushlagich
-    dp.include_routers(admin.router, student.router, student.app, group.router, student.fallback)
+    dp.include_routers(admin.router, parents.router, student.router, student.app, daily.router,
+                       parents.child_router, group.router, student.fallback)
 
     await bot.set_my_commands([BotCommand(command="start", description="Bosh menyu"),
                                BotCommand(command="help", description="Yordam"),
@@ -82,6 +88,7 @@ async def main():
                               scope=BotCommandScopeAllGroupChats())
 
     sched = asyncio.create_task(group.scheduler(bot))
+    cron_task = asyncio.create_task(cron.loop(bot))
     try:
         if WEBHOOK_BASE:
             await run_webhook(bot, dp)
@@ -90,6 +97,7 @@ async def main():
             await dp.start_polling(bot, allowed_updates=ALLOWED)
     finally:
         sched.cancel()
+        cron_task.cancel()
         await db.close()
         await bot.session.close()
 

@@ -14,6 +14,7 @@ from aiogram.exceptions import TelegramAPIError, TelegramForbiddenError
 from aiogram.filters import Command
 from aiogram.types import CallbackQuery, ChatMemberUpdated, Message, PollAnswer
 
+import daily
 import db
 from common import esc, fmt_dur, is_admin, kb
 from config import ADMIN_IDS, TZ
@@ -45,7 +46,7 @@ poll_session: dict[str, GroupTest] = {}
 
 # ---------------- javoblar (shaxsiy test ham, guruh ham) ----------------
 @router.poll_answer()
-async def on_poll_answer(pa: PollAnswer):
+async def on_poll_answer(pa: PollAnswer, bot: Bot):
     if not pa.user:
         return
     if await quiz.on_answer(pa.poll_id, pa.user.id, pa.option_ids):
@@ -62,9 +63,11 @@ async def on_poll_answer(pa: PollAnswer):
         "INSERT INTO group_scores(chat_id, user_id, name, correct, answered) VALUES(?,?,?,?,1) "
         "ON CONFLICT(chat_id, user_id) DO UPDATE SET correct=group_scores.correct+excluded.correct, answered=group_scores.answered+1, "
         "name=excluded.name", (gp["chat_id"], pa.user.id, name, ok))
-    await db.execute("INSERT INTO group_answers(poll_id, chat_id, user_id, question_id, ok) VALUES(?,?,?,?,?) "
-                     "ON CONFLICT DO NOTHING",
-                     (pa.poll_id, gp["chat_id"], pa.user.id, gp["question_id"], ok))
+    await db.execute("INSERT INTO group_answers(poll_id, chat_id, user_id, question_id, ok, answered_at) "
+                     "VALUES(?,?,?,?,?,?) ON CONFLICT DO NOTHING",
+                     (pa.poll_id, gp["chat_id"], pa.user.id, gp["question_id"], ok, time.time()))
+    if u:
+        await daily.on_group_answer(bot, pa.user.id)
     s = poll_session.get(pa.poll_id)
     if s:
         _, sent = s.polls[pa.poll_id]
@@ -159,13 +162,19 @@ async def cmd_group_now(msg: Message, bot: Bot):
     await post_question(bot, msg.chat.id)
 
 
+async def chat_group(chat_id: int) -> int:
+    """Telegram guruhi qaysi o'quv guruhiga (Katta/Kichik) bog'langan."""
+    g = await db.fetchone("SELECT study_group_id FROM groups WHERE chat_id=?", (chat_id,))
+    return (g["study_group_id"] if g else None) or 1
+
+
 @router.message(Command("test"), F.chat.type.in_(GROUP_TYPES))
 async def cmd_group_test(msg: Message):
     if not from_admin(msg):
         return
     await _remember_group(msg)
     tests = await db.fetchall("SELECT t.id, t.title, (SELECT COUNT(*) FROM questions q WHERE q.test_id=t.id) AS n "
-                              "FROM tests t ORDER BY t.sort")
+                              "FROM tests t WHERE t.group_id=? ORDER BY t.sort", (await chat_group(msg.chat.id),))
     rows = [[(f"{t['title']} [{t['n']}]", f"gt:pick:{t['id']}")] for t in tests if t["n"]]
     rows.append([("❌ Yopish", "gt:close")])
     await msg.answer("📝 Guruhga qaysi testni yuboray? (faqat admin tanlay oladi)", reply_markup=kb(rows))
@@ -240,7 +249,7 @@ async def _send_group_poll(bot: Bot, chat_id: int, row, prefix: str, qid, fun_id
     return msg.poll.id, correct
 
 
-async def question_weights(chat_id: int | None, rows) -> list[float]:
+async def question_weights(chat_id: int | None, rows, gid: int | None = None) -> list[float]:
     """Aqlli tanlash: har bir savolga «muhimlik» vazni beradi.
 
     Vazn oshadi, agar:
@@ -261,7 +270,10 @@ async def question_weights(chat_id: int | None, rows) -> list[float]:
         recent = {r["question_id"] for r in await db.fetchall(
             "SELECT question_id FROM group_polls WHERE chat_id=? AND question_id IS NOT NULL "
             "ORDER BY sent_at DESC LIMIT 150", (chat_id,))}
-    students = max(1, (await db.fetchone("SELECT COUNT(*) AS n FROM users WHERE status='approved'"))["n"])
+    if gid is None and chat_id is not None:
+        gid = await chat_group(chat_id)
+    students = max(1, (await db.fetchone("SELECT COUNT(*) AS n FROM users WHERE status='approved' AND group_id=?",
+                                         (gid or 1,)))["n"])
     done = {r["test_id"]: r["n"] for r in await db.fetchall(
         "SELECT test_id, COUNT(DISTINCT user_id) AS n FROM attempts WHERE status='done' GROUP BY test_id")}
     weights = []
@@ -283,7 +295,8 @@ async def _pick_test_question(chat_id: int):
     if scope != "all":
         rows = await db.fetchall("SELECT q.* FROM questions q WHERE q.test_id=?", (scope,))
     else:
-        rows = await db.fetchall("SELECT q.* FROM questions q JOIN tests t ON t.id=q.test_id WHERE t.is_open=1")
+        rows = await db.fetchall("SELECT q.* FROM questions q JOIN tests t ON t.id=q.test_id "
+                                 "WHERE t.is_open=1 AND t.group_id=?", (await chat_group(chat_id),))
     if not rows:
         return None
     weights = await question_weights(chat_id, rows)
@@ -322,7 +335,7 @@ async def post_question(bot: Bot, chat_id: int, force_fun: bool | None = None) -
 
 
 # ---------------- admin tanlagan testni guruhga yuborish ----------------
-async def start_group_test(bot: Bot, chat_id: int, test_id: str, count: int) -> Optional[str]:
+async def start_group_test(bot: Bot, chat_id: int, test_id: str, count: int, kind: str = "manual") -> Optional[str]:
     if chat_id in running:
         return "Bu guruhda test allaqachon ketyapti. To'xtatish: /stoptest"
     t = await db.fetchone("SELECT * FROM tests WHERE id=?", (test_id,))
@@ -346,8 +359,11 @@ async def start_group_test(bot: Bot, chat_id: int, test_id: str, count: int) -> 
     if not g:
         await db.execute("INSERT INTO groups(chat_id, title, active, added_at) VALUES(?,?,1,?)",
                          (chat_id, None, int(time.time())))
-    s = GroupTest(chat_id, test_id, t["title"], len(qs), await db.get_int("group_seconds"))
+    title = ("📅 Rejali test: " if kind == "sched" else "") + t["title"]
+    s = GroupTest(chat_id, test_id, title, len(qs), await db.get_int("group_seconds"))
     running[chat_id] = s
+    await db.execute("INSERT INTO group_sessions(chat_id, test_id, sent_at, n, kind) VALUES(?,?,?,?,?)",
+                     (chat_id, test_id, time.time(), len(qs), kind))
     s.task = asyncio.create_task(_run_group_test(bot, s, qs))
     return None
 
@@ -364,7 +380,7 @@ async def _run_group_test(bot: Bot, s: GroupTest, qs):
     thread = await _group_thread(s.chat_id)
     try:
         await bot.send_message(
-            s.chat_id, f"📝 <b>Test boshlanadi: {html.escape(s.title)}</b>\n\n"
+            s.chat_id, f"📝 <b>Test boshlanadi</b>\n{html.escape(s.title)}\n\n"
                        f"❓ Savollar: <b>{s.total}</b> ta\n⏱ Har biriga: <b>{s.seconds}</b> soniya\n\n"
                        "Tez va to'g'ri javob bering! Oxirida g'oliblar e'lon qilinadi. 🏆",
             message_thread_id=thread)
@@ -403,14 +419,100 @@ def _session_result_text(s: GroupTest, sent: int) -> str:
     return "\n".join(lines)
 
 
-# ---------------- avtomatik rejalashtiruvchi ----------------
+# ---------------- jadval bo'yicha test (har kuni belgilangan vaqtda) ----------------
+async def pick_sched_test(chat_id: int):
+    """Navbatdagi testni tanlaydi.
+
+    1) Guruhga hali yuborilmagan ochiq testlar — dars tartibida (eng birinchisi).
+    2) Hammasi yuborilgan bo'lsa — eng ko'p xato qilingan va uzoq vaqt berilmagan test.
+    """
+    gid = await chat_group(chat_id)
+    tests = await db.fetchall("SELECT t.id, t.title, t.sort FROM tests t WHERE t.is_open=1 AND t.group_id=? "
+                              "AND EXISTS (SELECT 1 FROM questions q WHERE q.test_id=t.id) ORDER BY t.sort, t.title",
+                              (gid,))
+    if not tests:
+        return None
+    sent = {r["test_id"]: r["last"] for r in await db.fetchall(
+        "SELECT test_id, MAX(sent_at) AS last FROM group_sessions WHERE chat_id=? GROUP BY test_id", (chat_id,))}
+    for t in tests:
+        if t["id"] not in sent:
+            return t["id"]
+    err = {}
+    for r in await db.fetchall(
+            "SELECT q.test_id AS t, COUNT(*) AS n, SUM(ga.ok) AS c FROM group_answers ga "
+            "JOIN questions q ON q.id = ga.question_id WHERE ga.chat_id=? GROUP BY q.test_id", (chat_id,)):
+        err[r["t"]] = [r["n"], r["c"] or 0]
+    for r in await db.fetchall(
+            "SELECT q.test_id AS t, COUNT(*) AS n, SUM(an.is_correct) AS c FROM answers an "
+            "JOIN questions q ON q.id = an.question_id JOIN attempts a ON a.id = an.attempt_id "
+            "JOIN users u ON u.id = a.user_id WHERE u.group_id=? GROUP BY q.test_id", (gid,)):
+        e = err.setdefault(r["t"], [0, 0])
+        e[0] += r["n"]
+        e[1] += r["c"] or 0
+    now = time.time()
+
+    def score(t):
+        n, c = err.get(t["id"], (0, 0))
+        e = (n - c + 1) / (n + 2)
+        days = min(14.0, (now - sent[t["id"]]) / 86400)
+        return 3 * e + days / 7
+    return max(tests, key=score)["id"]
+
+
+def parse_times(text: str) -> list[str]:
+    """«16:00, 19.30 8:5» -> ['08:05', '16:00', '19:30']"""
+    import re
+    out = set()
+    for h, m in re.findall(r"(\d{1,2})[:.](\d{2})", text or ""):
+        h, m = int(h), int(m)
+        if 0 <= h < 24 and 0 <= m < 60:
+            out.add(f"{h:02d}:{m:02d}")
+    return sorted(out)
+
+
+_groups_cache = None
+
+
+async def cached_groups():
+    global _groups_cache
+    if _groups_cache is None:
+        _groups_cache = await db.fetchall("SELECT * FROM groups WHERE active=1")
+    return _groups_cache
+
+
+async def sched_tick(bot: Bot):
+    """Har daqiqada chaqiriladi (bazaga murojaat qilmasdan): vaqti kelgan guruhlarga rejali test boshlaydi."""
+    global _groups_cache
+    now = datetime.now(TZ)
+    hm, day = now.strftime("%H:%M"), now.date().isoformat()
+    for g in await cached_groups():
+        times = parse_times(g["sched_times"] or "")
+        if not times or g["chat_id"] in running:
+            continue
+        for t in times:
+            key = f"{day} {t}"
+            th, tm = map(int, t.split(":"))
+            late = (now.hour * 60 + now.minute) - (th * 60 + tm)
+            if 0 <= late <= 30 and key > (g["sched_last"] or ""):
+                await db.execute("UPDATE groups SET sched_last=? WHERE chat_id=?", (key, g["chat_id"]))
+                _groups_cache = None
+                tid = await pick_sched_test(g["chat_id"])
+                if tid:
+                    err = await start_group_test(bot, g["chat_id"], tid, g["sched_count"] or 10, kind="sched")
+                    if err:
+                        log.warning("Rejali test boshlanmadi %s: %s", g["chat_id"], err)
+                break
+
+
+# ---------------- avtomatik rejalashtiruvchi (oraliq bilan bitta-bitta savol) ----------------
 _next_due = 0.0
 
 
 def kick_scheduler():
     """Guruh sozlamalari o'zgarganda rejalashtiruvchini darhol qayta hisoblashga majbur qiladi."""
-    global _next_due
+    global _next_due, _groups_cache
     _next_due = 0.0
+    _groups_cache = None
 
 
 async def scheduler(bot: Bot):

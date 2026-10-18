@@ -50,6 +50,7 @@ class QuizManager:
         self.sessions: dict[int, Session] = {}
         self.poll_owner: dict[str, int] = {}
         self.bot: Optional[Bot] = None
+        self.daily_finisher = None   # daily.py o'rnatadi: kunlik vazifa tugaganda chaqiriladi
 
     def active(self, uid: int) -> Optional[Session]:
         return self.sessions.get(uid)
@@ -67,7 +68,16 @@ class QuizManager:
             return "Bu testda hali savollar yo'q."
         random.shuffle(questions)
         n = test["per_attempt"] or len(questions)
-        questions = questions[:n]
+        return await self.start_questions(bot, uid, chat_id, test_id, test["title"], questions[:n])
+
+    async def start_questions(self, bot: Bot, uid: int, chat_id: int, test_id: str, title: str,
+                              questions: list[dict]) -> Optional[str]:
+        """Berilgan savollar ro'yxati bilan test boshlaydi (kunlik vazifa uchun test_id='daily')."""
+        self.bot = bot
+        if uid in self.sessions:
+            return "Sizda tugallanmagan test bor. Avval uni tugating yoki to'xtating."
+        if not questions:
+            return "Savollar topilmadi."
         items = []
         for q in questions:
             perm = list(range(len(q["options"])))
@@ -77,11 +87,11 @@ class QuizManager:
         seconds = await db.get_int("private_seconds")
         aid = await db.execute("INSERT INTO attempts(user_id, test_id, started_at, total) VALUES(?,?,?,?)",
                                (uid, test_id, time.time(), len(items)))
-        s = Session(uid, chat_id, aid, test_id, test["title"], items, seconds)
+        s = Session(uid, chat_id, aid, test_id, title, items, seconds)
         self.sessions[uid] = s
         await bot.send_message(
             chat_id,
-            f"🚀 <b>{html.escape(test['title'])}</b>\n"
+            f"🚀 <b>{html.escape(title)}</b>\n"
             f"Savollar: <b>{len(items)}</b> ta · har biriga <b>{seconds}</b> soniya.\nOmad!",
             reply_markup=kb([[("⏹ Testni to'xtatish", "tst:stop")]]))
         await self._send_current(s)
@@ -169,6 +179,9 @@ class QuizManager:
         await db.execute("UPDATE attempts SET finished_at=?, correct=?, duration=?, status=? WHERE id=?",
                          (now, s.correct, dur, status, s.attempt_id))
         total = len(s.items)
+        if s.test_id == "daily" and self.daily_finisher:
+            await self.daily_finisher(self.bot, s, status)
+            return
         if status == "stopped":
             text = (f"⏹ Test to'xtatildi.\nJavob berilgan savollar: {s.pos} / {total}\n"
                     f"To'g'ri javoblar: {s.correct}\n\nTo'xtatilgan test reytingga kirmaydi.")

@@ -32,4 +32,15 @@ DEFAULT_SETTINGS = {
     "require_read": "1",         # testdan oldin darsni o'qish majburiy
     "ranking_mode": "first",     # first = birinchi urinish, best = eng yaxshi urinish
     "allow_retake": "1",         # testni qayta ishlash mumkinmi
+    # kunlik vazifa
+    "daily_on": "1",             # har kuni shaxsiy vazifa yuborish
+    "daily_time": "16:00",       # vazifa yuboriladigan vaqt
+    "daily_count": "10",         # vazifadagi savollar soni
+    "daily_group_min": "5",      # guruhda nechta savolga javob bersa — vazifa bajarilgan hisoblanadi
+    "remind_on": "1",            # bajarmaganlarga eslatma
+    "remind_time": "20:00",      # eslatma vaqti
+    # ota-onalarga haftalik hisobot
+    "report_on": "1",
+    "report_day": "6",           # 0 = dushanba ... 6 = yakshanba
+    "report_time": "19:00",
 }

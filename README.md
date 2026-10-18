@@ -102,6 +102,22 @@ Botga `/start` yozing. Admin panel chiqsa, hammasi ishlayapti. Darslar va testla
 ### Muqobil: o'z VPS serveringiz (Ubuntu)
 Bot papkasini serverga yuboring va `bash install.sh` buyrug'ini ishga tushiring. Skript token va ID raqamingizni so'raydi, qolganini o'zi bajaradi.
 
+## 2-bosqich imkoniyatlari
+
+**Ikki o'quv guruhi (Katta / Kichik).** O'quvchi /start bosganda sizga kelgan arizada «✅ Katta guruh» yoki «✅ Kichik guruh» tugmasi bor — qaysi birini bossangiz, bola o'sha guruhga tushadi va faqat o'sha guruh darslari va testlarini ko'radi. Guruhni keyin ham o'zgartirish mumkin: ⚙️ Admin → 👥 O'quvchilar → bola → «Guruhni o'zgartirish». Darslar va testlar bo'limida ham yuqorida guruh tanlanadi.
+
+**Telegram guruhiga jadval bo'yicha test.** ⚙️ Admin → 👥 Guruh → guruh nomini bosing:
+- «O'quv guruhi» — shu Telegram guruhiga qaysi guruh testlari yuborilishini tanlaysiz (Katta/Kichik);
+- «⏰ Jadval» — vaqt(lar)ni yozasiz: `16:00` yoki `9:30, 16:00`;
+- savollar soni — 5/10/15/20/30.
+Bot o'zi test tanlaydi: avval hali yuborilmagan testlar tartib bilan, hammasi yuborilgach — bolalar eng ko'p xato qilgan va ancha vaqtdan beri yuborilmagan test. Siz istalgan payt «📤 Hozir test yuborish» orqali o'zingiz ham yuborasiz.
+
+**Kunlik vazifa va seriya 🔥.** ⚙️ Admin → 📅 Kunlik vazifa: yuborish vaqti, savollar soni, kechki eslatma vaqti. Har bir bolaga uning xatolariga qarab shaxsiy savollar tanlanadi. Bola vazifani botda ishlaydi yoki guruhdagi savollarning kamida 5 tasiga (sozlanadi) javob beradi — ikkalasi ham hisoblanadi. Ketma-ket kunlar «seriya» bo'lib sanaladi.
+
+**Haftalik hisobot.** Kichik bolalarda telefon yo'q — bot ota-onaning telefonida bo'ladi, shuning uchun hisobot har hafta o'quvchi akkauntining o'ziga keladi (o'qilgan darslar, test natijalari, kunlik vazifa, seriya, guruhdagi o'rni). Istalgan payt «📊 Haftalik hisobot» tugmasi bilan ham ko'riladi. Ikkinchi ota-ona (masalan, dadasi) ham olishi uchun shu tugmadagi havolani unga yuborish kifoya. Aka-uka ikki xil telefondan foydalansa, bir-birining havolasini ochib, ikkala farzand hisobotini bitta telefonda olish mumkin. Kuni va vaqti: ⚙️ Admin → 👨‍👩‍👦 Ota-onalar.
+
+**Kichik guruh darslari.** `data/seed/kichik_v1.json` — 22 dars (11 lug'at darsi + 11 dialog darsi) va 25 test. Bot yangilangach bir marta avtomatik Kichik guruhga qo'shiladi.
+
 ## Botni guruhga ulash
 
 1. Botni guruhga qo'shing va **admin** qiling. Uni **siz** qo'shsangiz, guruh avtomatik faollashadi.

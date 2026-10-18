@@ -130,6 +130,33 @@ CREATE TABLE IF NOT EXISTS group_answers (
     ok INTEGER NOT NULL,
     PRIMARY KEY (poll_id, user_id)
 );
+CREATE TABLE IF NOT EXISTS study_groups (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    sort INTEGER NOT NULL DEFAULT 0
+);
+CREATE TABLE IF NOT EXISTS group_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chat_id INTEGER NOT NULL,
+    test_id TEXT NOT NULL,
+    sent_at REAL NOT NULL,
+    n INTEGER NOT NULL,
+    kind TEXT
+);
+CREATE TABLE IF NOT EXISTS daily_log (
+    user_id INTEGER NOT NULL,
+    day TEXT NOT NULL,
+    source TEXT,
+    PRIMARY KEY (user_id, day)
+);
+CREATE TABLE IF NOT EXISTS parents (
+    parent_id INTEGER NOT NULL,
+    child_id INTEGER NOT NULL,
+    name TEXT,
+    username TEXT,
+    created_at INTEGER NOT NULL,
+    PRIMARY KEY (parent_id, child_id)
+);
 CREATE INDEX IF NOT EXISTS ix_q_test ON questions(test_id);
 CREATE INDEX IF NOT EXISTS ix_att_user ON attempts(user_id, test_id);
 CREATE INDEX IF NOT EXISTS ix_att_test ON attempts(test_id, status);
@@ -138,9 +165,23 @@ CREATE INDEX IF NOT EXISTS ix_att_test ON attempts(test_id, status);
 
 PG_SCHEMA = (SCHEMA.replace("INTEGER PRIMARY KEY AUTOINCREMENT", "BIGSERIAL PRIMARY KEY")
              .replace("INTEGER", "BIGINT").replace("REAL", "DOUBLE PRECISION"))
-ID_TABLES = {"lessons", "lesson_pages", "questions", "fun_questions", "attempts"}
+ID_TABLES = {"lessons", "lesson_pages", "questions", "fun_questions", "attempts", "group_sessions"}
 ALL_TABLES = ["users", "lessons", "lesson_pages", "lesson_reads", "tests", "questions", "fun_questions",
-              "attempts", "answers", "settings", "groups", "group_polls", "group_scores", "group_answers"]
+              "attempts", "answers", "settings", "groups", "group_polls", "group_scores", "group_answers",
+              "study_groups", "group_sessions", "daily_log", "parents"]
+
+# Keyinroq qo'shilgan ustunlar: (jadval, ustun, SQLite turi). Eski bazalarga avtomatik qo'shiladi.
+NEW_COLUMNS = [
+    ("groups", "thread_id", "INTEGER"),
+    ("users", "group_id", "INTEGER"),
+    ("lessons", "group_id", "INTEGER"),
+    ("tests", "group_id", "INTEGER"),
+    ("groups", "study_group_id", "INTEGER"),
+    ("groups", "sched_times", "TEXT"),
+    ("groups", "sched_count", "INTEGER"),
+    ("groups", "sched_last", "TEXT"),
+    ("group_answers", "answered_at", "REAL"),
+]
 
 _conn: Optional[aiosqlite.Connection] = None
 _pool = None
@@ -172,7 +213,9 @@ async def connect():
                                           command_timeout=30)
         async with _pool.acquire() as c:
             await c.execute(PG_SCHEMA)
-            await c.execute("ALTER TABLE groups ADD COLUMN IF NOT EXISTS thread_id BIGINT")
+            for table, col, typ in NEW_COLUMNS:
+                pg_typ = {"INTEGER": "BIGINT", "REAL": "DOUBLE PRECISION"}.get(typ, typ)
+                await c.execute(f"ALTER TABLE {table} ADD COLUMN IF NOT EXISTS {col} {pg_typ}")
             for k, v in DEFAULT_SETTINGS.items():
                 await c.execute("INSERT INTO settings(key, value) VALUES($1, $2) ON CONFLICT DO NOTHING", k, v)
         return
@@ -182,9 +225,9 @@ async def connect():
     await _conn.execute("PRAGMA journal_mode=WAL")
     await _conn.executescript(SCHEMA)
     # eski bazalar uchun yangi ustunlar
-    for sql in ("ALTER TABLE groups ADD COLUMN thread_id INTEGER",):
+    for table, col, typ in NEW_COLUMNS:
         try:
-            await _conn.execute(sql)
+            await _conn.execute(f"ALTER TABLE {table} ADD COLUMN {col} {typ}")
         except Exception:  # noqa: BLE001 — ustun allaqachon bor
             pass
     for k, v in DEFAULT_SETTINGS.items():
@@ -335,3 +378,41 @@ async def ranking(test_id: str, mode: str) -> list:
     ORDER BY CAST(correct AS REAL)/total DESC, duration ASC
     """
     return await fetchall(sql, (test_id,))
+
+
+# ---------------- o'quv guruhlari (Katta / Kichik) ----------------
+DEFAULT_GROUPS = [(1, "Katta guruh", 1), (2, "Kichik guruh", 2)]
+
+
+async def migrate():
+    """Guruhlar paydo bo'lishidan oldingi ma'lumotlarni «Katta guruh»ga biriktiradi (har ishga tushganda xavfsiz)."""
+    for gid, name, sort in DEFAULT_GROUPS:
+        await execute("INSERT INTO study_groups(id, name, sort) VALUES(?,?,?) ON CONFLICT DO NOTHING", (gid, name, sort))
+    await execute("UPDATE users SET group_id=1 WHERE group_id IS NULL AND status IN ('approved','blocked')")
+    await execute("UPDATE lessons SET group_id=1 WHERE group_id IS NULL")
+    await execute("UPDATE tests SET group_id=1 WHERE group_id IS NULL")
+    await execute("UPDATE groups SET study_group_id=1 WHERE study_group_id IS NULL")
+    await execute("UPDATE groups SET sched_count=10 WHERE sched_count IS NULL")
+
+
+_groups_cache: list = []
+
+
+async def study_groups() -> list:
+    global _groups_cache
+    if not _groups_cache:
+        _groups_cache = await fetchall("SELECT * FROM study_groups ORDER BY sort, id")
+    return _groups_cache
+
+
+async def group_name(gid) -> str:
+    for g in await study_groups():
+        if g["id"] == gid:
+            return g["name"]
+    return "—"
+
+
+async def user_group(uid: int):
+    """O'quvchining guruh raqami (admin uchun None — hammasini ko'radi)."""
+    u = await get_user(uid)
+    return u["group_id"] if u else None
