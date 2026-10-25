@@ -8,7 +8,7 @@ USER_NAME="$(whoami)"
 
 echo "==> Kerakli dasturlar o'rnatilmoqda..."
 sudo apt-get update -y
-sudo apt-get install -y python3 python3-venv python3-pip
+sudo apt-get install -y python3 python3-venv python3-pip git tzdata
 
 echo "==> Python muhiti tayyorlanmoqda..."
 python3 -m venv venv
@@ -17,9 +17,14 @@ python3 -m venv venv
 
 if [ ! -f .env ]; then
   echo
-  read -r -p "BotFather bergan TOKEN ni kiriting: " TOKEN
+  echo "Quyidagilarni kiriting (token va baza manzili yozilayotganda ekranda ko'rinmaydi — bu normal):"
+  read -r -s -p "BotFather bergan TOKEN: " TOKEN; echo
   read -r -p "Sizning Telegram ID raqamingiz: " ADMIN
-  printf "BOT_TOKEN=%s\nADMIN_IDS=%s\nTIMEZONE=Asia/Tashkent\n" "$TOKEN" "$ADMIN" > .env
+  read -r -s -p "Neon baza manzili (postgresql://... ; bo'sh qoldirsangiz — serverdagi lokal baza): " DBURL; echo
+  {
+    printf "BOT_TOKEN=%s\nADMIN_IDS=%s\nTIMEZONE=Asia/Tashkent\n" "$TOKEN" "$ADMIN"
+    if [ -n "$DBURL" ]; then printf "DATABASE_URL=%s\n" "$DBURL"; fi
+  } > .env
   chmod 600 .env
 fi
 
