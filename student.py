@@ -340,7 +340,7 @@ async def rating_menu(msg: Message):
     await msg.answer("🏆 Qaysi test reytingini ko'rmoqchisiz?", reply_markup=kb(rows) if rows else None)
 
 
-async def leaderboard_text(tid: str, uid: int, limit: int = 10) -> str:
+async def leaderboard_text(tid: str, uid: int, limit: int = 1000) -> str:
     t = await db.fetchone("SELECT title FROM tests WHERE id=?", (tid,))
     if not t:
         return "Test topilmadi."
@@ -370,7 +370,8 @@ async def leaderboard_text(tid: str, uid: int, limit: int = 10) -> str:
 @app.callback_query(F.data.startswith("rank:"))
 async def rating_show(cb: CallbackQuery):
     tid = cb.data.split(":", 1)[1]
-    await cb.message.answer(await leaderboard_text(tid, cb.from_user.id))
+    for part in chunk_text(await leaderboard_text(tid, cb.from_user.id)):
+        await cb.message.answer(part)
     await cb.answer()
 
 

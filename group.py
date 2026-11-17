@@ -16,7 +16,7 @@ from aiogram.types import CallbackQuery, ChatMemberUpdated, Message, PollAnswer
 
 import daily
 import db
-from common import esc, fmt_dur, is_admin, kb
+from common import chunk_text, esc, fmt_dur, is_admin, kb
 from config import ADMIN_IDS, TZ
 from quiz import quiz
 
@@ -136,22 +136,31 @@ async def _remember_group(msg: Message):
 
 
 # ---------------- guruh buyruqlari ----------------
-async def group_top_text(chat_id: int, limit: int = 10) -> str:
-    rows = await db.fetchall("SELECT * FROM group_scores WHERE chat_id=? ORDER BY correct DESC, answered ASC LIMIT ?",
-                             (chat_id, limit))
+async def group_top_text(chat_id: int, limit: int | None = None) -> str:
+    """Guruh reytingi — barcha qatnashganlar (limit berilmasa)."""
+    rows = await db.fetchall("SELECT * FROM group_scores WHERE chat_id=? ORDER BY correct DESC, answered ASC",
+                             (chat_id,))
     if not rows:
         return "🏆 Guruh reytingi hozircha bo'sh. Savollarga javob bering!"
+    if limit:
+        rows = rows[:limit]
     medals = {1: "🥇", 2: "🥈", 3: "🥉"}
-    lines = ["🏆 <b>Guruh reytingi</b>\n"]
+    lines = [f"🏆 <b>Guruh reytingi</b> · {len(rows)} kishi\n"]
     for i, r in enumerate(rows, 1):
         lines.append(f"{medals.get(i, f'{i}.')} {html.escape(r['name'] or '—')} — <b>{r['correct']}</b> ball "
                      f"({r['answered']} ta javob)")
     return "\n".join(lines)
 
 
+async def send_long(bot: Bot, chat_id: int, text: str, thread: int | None = None, **kw):
+    """Uzun matnni (Telegram 4096 belgi chegarasi) bir nechta xabarga bo'lib yuboradi."""
+    for part in chunk_text(text):
+        await bot.send_message(chat_id, part, message_thread_id=thread, **kw)
+
+
 @router.message(Command("reyting", "top"), F.chat.type.in_(GROUP_TYPES))
-async def cmd_group_top(msg: Message):
-    await msg.answer(await group_top_text(msg.chat.id))
+async def cmd_group_top(msg: Message, bot: Bot):
+    await send_long(bot, msg.chat.id, await group_top_text(msg.chat.id), msg.message_thread_id)
 
 
 @router.message(Command("savol"), F.chat.type.in_(GROUP_TYPES))
@@ -396,7 +405,7 @@ async def _run_group_test(bot: Bot, s: GroupTest, qs):
             s.polls[res[0]] = (res[1], time.time())
             poll_session[res[0]] = s
             await asyncio.sleep(s.seconds + 3)
-        await bot.send_message(s.chat_id, _session_result_text(s, sent), message_thread_id=thread)
+        await send_long(bot, s.chat_id, _session_result_text(s, sent), thread)
         await db.execute("UPDATE groups SET last_post_at=? WHERE chat_id=?", (time.time(), s.chat_id))
     except Exception:  # noqa: BLE001
         log.exception("Guruh testi xatosi")
@@ -407,14 +416,24 @@ async def _run_group_test(bot: Bot, s: GroupTest, qs):
 
 
 def _session_result_text(s: GroupTest, sent: int) -> str:
+    """Guruh testi natijasi: avval savollarning hammasiga javob berganlar, keyin qisman qatnashganlar."""
     head = f"🏁 <b>{html.escape(s.title)}</b> — " + ("to'xtatildi" if s.cancelled else "yakunlandi!")
     if not s.scores:
         return head + f"\n\nYuborilgan savollar: {sent}\nHech kim javob bermadi 😔"
-    ranked = sorted(s.scores.values(), key=lambda r: (-r[1], r[3]))
+    rows = list(s.scores.values())                       # (ism, to'g'ri, javoblar soni, sarflangan vaqt)
+    full = sorted([r for r in rows if r[2] >= sent], key=lambda r: (-r[1], r[3]))
+    part = sorted([r for r in rows if r[2] < sent], key=lambda r: (-r[1], -r[2], r[3]))
     medals = {1: "🥇", 2: "🥈", 3: "🥉"}
-    lines = [head, f"Savollar: {sent} · Ishtirokchilar: {len(ranked)}\n"]
-    for i, (name, ok, ans, spent) in enumerate(ranked[:15], 1):
-        lines.append(f"{medals.get(i, f'{i}.')} {html.escape(name)} — <b>{ok}/{sent}</b> · ⏱ {fmt_dur(spent)}")
+    lines = [head, f"Savollar: {sent} · Ishtirokchilar: {len(rows)} · To'liq qatnashgan: {len(full)}"]
+    if full:
+        lines.append(f"\n✅ <b>To'liq qatnashganlar ({len(full)})</b>")
+        for i, (name, ok, ans, spent) in enumerate(full, 1):
+            p = round(100 * ok / sent) if sent else 0
+            lines.append(f"{medals.get(i, f'{i}.')} {html.escape(name)} — <b>{ok}/{sent}</b> ({p}%) · ⏱ {fmt_dur(spent)}")
+    if part:
+        lines.append(f"\n⚠️ <b>Qisman qatnashganlar ({len(part)})</b>")
+        for i, (name, ok, ans, spent) in enumerate(part, 1):
+            lines.append(f"{i}. {html.escape(name)} — {ok}/{sent} · {ans} ta savolga javob berdi")
     lines.append("\n<i>Teng ball bo'lsa, tezroq javob berganlar yuqorida.</i>")
     return "\n".join(lines)
 

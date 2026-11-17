@@ -18,7 +18,7 @@ import db
 from common import MENU_BUTTONS, BTN_ADMIN, BTN_LESSONS, BTN_RATING, BTN_RESULTS, BTN_TESTS, IsAdmin, PrivateChat, chunk_text, fmt_dur, kb, main_menu, pct, safe_answer, safe_edit
 from config import DB_PATH, INTERVAL_CHOICES, PER_ATTEMPT_CHOICES, SECONDS_CHOICES, TZ
 from docx_tools import export_tests, lesson_blocks, paginate, parse_tests
-from group import kick_scheduler, count_buttons, group_top_text, post_question, running, start_group_test, stop_group_test
+from group import kick_scheduler, count_buttons, group_top_text, send_long, post_question, running, start_group_test, stop_group_test
 
 router = Router(name="admin")
 router.message.filter(PrivateChat(), IsAdmin())
@@ -1119,8 +1119,10 @@ async def g_toggle(cb: CallbackQuery):
 @router.callback_query(F.data.startswith("adm:gtop:"))
 async def g_top(cb: CallbackQuery, bot: Bot):
     chat_id = int(cb.data.split(":")[2])
-    text = await group_top_text(chat_id, 15)
-    await cb.message.answer(text, reply_markup=kb([[("📣 Guruhga yuborish", f"adm:gpub:{chat_id}")]]))
+    parts = chunk_text(await group_top_text(chat_id))
+    for i, part in enumerate(parts):
+        last = i == len(parts) - 1
+        await cb.message.answer(part, reply_markup=kb([[("📣 Guruhga yuborish", f"adm:gpub:{chat_id}")]]) if last else None)
     await cb.answer()
 
 
@@ -1128,7 +1130,7 @@ async def g_top(cb: CallbackQuery, bot: Bot):
 async def g_pub(cb: CallbackQuery, bot: Bot):
     chat_id = int(cb.data.split(":")[2])
     try:
-        await bot.send_message(chat_id, await group_top_text(chat_id, 10))
+        await send_long(bot, chat_id, await group_top_text(chat_id))
         await cb.answer("📣 Yuborildi")
     except Exception as e:  # noqa: BLE001
         await cb.answer(f"Yuborib bo'lmadi: {e}", show_alert=True)
