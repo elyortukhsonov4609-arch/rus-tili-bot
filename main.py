@@ -26,7 +26,7 @@ import group
 import parents
 import student
 from config import ADMIN_IDS, BOT_TOKEN
-from seed import seed_if_empty, seed_kichik
+from seed import seed_if_empty, seed_katta_v2, seed_kichik
 
 ALLOWED = ["message", "callback_query", "poll_answer", "my_chat_member"]
 WEBHOOK_BASE = (os.getenv("WEBHOOK_URL") or os.getenv("RENDER_EXTERNAL_URL") or "").rstrip("/")
@@ -69,6 +69,7 @@ async def main():
     await seed_if_empty()
     await db.migrate()
     await seed_kichik()
+    await seed_katta_v2()
     # oldingi ishga tushirishdan qolib ketgan tugallanmagan testlar
     await db.execute("UPDATE attempts SET status='abandoned' WHERE status='active'")
 

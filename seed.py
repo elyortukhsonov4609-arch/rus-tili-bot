@@ -88,3 +88,43 @@ async def seed_kichik():
         n_tests += 1
     await db.set_setting("content_kichik_v1", "1")
     log.info("Kichik guruh mazmuni qo'shildi: %d dars, %d test", len(data["lessons"]), n_tests)
+
+
+async def seed_katta_v2():
+    """Katta guruh: 8–10-darslar va 32 ta test (data/seed/katta_v2.json) — bir marta qo'shiladi.
+
+    Darslar Katta guruhdagi oxirgi darsdan keyingi raqamlar bilan qo'shiladi (hozir 7 ta bo'lsa — 8, 9, 10).
+    Testlar mavjud testlardan keyin, fayldagi tartibda joylashadi; mavjud test id lari o'tkazib yuboriladi.
+    """
+    flag = "content_katta_v2"
+    if await db.get_setting(flag):
+        return
+    path = SEED_DIR / "katta_v2.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    gid = 1
+    row = await db.fetchone("SELECT COALESCE(MAX(num), 0) AS m FROM lessons WHERE group_id=?", (gid,))
+    next_num = int(row["m"] or 0) + 1
+    num_to_id = {}
+    for les in data["lessons"]:
+        lid = await db.execute("INSERT INTO lessons(num, title, short, group_id) VALUES(?,?,?,?)",
+                               (next_num, les["title"], les["short"], gid))
+        num_to_id[les["key"]] = lid
+        next_num += 1
+        for i, page in enumerate(les["pages"]):
+            await db.execute("INSERT INTO lesson_pages(lesson_id, idx, html) VALUES(?,?,?)", (lid, i, page))
+    row = await db.fetchone("SELECT COALESCE(MAX(sort), 0) AS m FROM tests WHERE group_id=?", (gid,))
+    sort = int(row["m"] or 0)
+    n_tests = 0
+    for t in data["tests"]:
+        sort += 10
+        if await db.fetchone("SELECT 1 FROM tests WHERE id=?", (t["id"],)):
+            continue
+        await db.execute("INSERT INTO tests(id, title, lesson_id, sort, per_attempt, source, group_id) "
+                         "VALUES(?,?,?,?,?,?,?)",
+                         (t["id"], t["title"], num_to_id.get(t.get("lesson")), sort, 30, t.get("source"), gid))
+        await db.replace_questions(t["id"], t["questions"])
+        n_tests += 1
+    await db.set_setting(flag, "1")
+    log.info("Katta guruh 2-paket qo'shildi: %d dars, %d test", len(data["lessons"]), n_tests)
