@@ -128,3 +128,48 @@ async def seed_katta_v2():
         n_tests += 1
     await db.set_setting(flag, "1")
     log.info("Katta guruh 2-paket qo'shildi: %d dars, %d test", len(data["lessons"]), n_tests)
+
+
+async def seed_kichik_v2():
+    """Kichik guruh 2-paket: 10 ta dars (transport … sport) va 44 ta test (data/seed/kichik_v2.json).
+
+    Bir marta qo'shiladi («content_kichik_v2» belgisi). Darslar Kichik guruhdagi oxirgi darsdan keyingi
+    raqamlar bilan qo'shiladi; sahifa va test nomlaridagi «{N}» o'sha dars raqami bilan almashtiriladi.
+    Testlar mavjud testlardan keyin, fayldagi tartibda; mavjud test id lari o'tkazib yuboriladi.
+    """
+    flag = "content_kichik_v2"
+    if await db.get_setting(flag):
+        return
+    path = SEED_DIR / "kichik_v2.json"
+    if not path.exists():
+        return
+    data = json.loads(path.read_text(encoding="utf-8"))
+    gid = 2
+    row = await db.fetchone("SELECT COALESCE(MAX(num), 0) AS m FROM lessons WHERE group_id=?", (gid,))
+    next_num = int(row["m"] or 0) + 1
+    key_to = {}
+    for les in data["lessons"]:
+        n = str(next_num)
+        lid = await db.execute("INSERT INTO lessons(num, title, short, group_id) VALUES(?,?,?,?)",
+                               (next_num, les["title"], les["short"], gid))
+        key_to[les["key"]] = (lid, n)
+        next_num += 1
+        for i, page in enumerate(les["pages"]):
+            await db.execute("INSERT INTO lesson_pages(lesson_id, idx, html) VALUES(?,?,?)",
+                             (lid, i, page.replace("{N}", n)))
+    row = await db.fetchone("SELECT COALESCE(MAX(sort), 0) AS m FROM tests WHERE group_id=?", (gid,))
+    sort = int(row["m"] or 0)
+    n_tests = 0
+    for t in data["tests"]:
+        sort += 10
+        if await db.fetchone("SELECT 1 FROM tests WHERE id=?", (t["id"],)):
+            continue
+        lid, n = key_to.get(t.get("lesson"), (None, ""))
+        title = t["title"].replace("{N}-dars: ", f"{n}-dars: " if n else "").replace("{N}", n)
+        await db.execute("INSERT INTO tests(id, title, lesson_id, sort, per_attempt, source, group_id) "
+                         "VALUES(?,?,?,?,?,?,?)",
+                         (t["id"], title, lid, sort, 30, t.get("source"), gid))
+        await db.replace_questions(t["id"], t["questions"])
+        n_tests += 1
+    await db.set_setting(flag, "1")
+    log.info("Kichik guruh 2-paket qo'shildi: %d dars, %d test", len(data["lessons"]), n_tests)
